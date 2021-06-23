@@ -1,0 +1,31 @@
+1. **OBJETIVO**
+
+O objetivo do presente documento/produto é dar cumprimento ao *Process
+Phase 5 Guidance – Build Conceptual Model*, previsto no *Conceptual
+Model Best-Practice Development Process* emitido pela OTAN.
+
+Este documento, por meio do link nele contido, registra em detalhes a
+estrutura e o conteúdo dos modelos conceituais produzidos para atender
+as necessidades da Fase 1 do Projeto ASA. Esses modelos serão utilizados
+para apoiar o desenvolvimento das simulações dentro do escopo
+mencionado, mas também poderão ser reutilizados em necessidades futuras.
+
+2. **REFERÊNCIAS**
+
+*RTO Technical Report MSG-058 – Conceptual Modeling for Military
+Modeling and Simulation:*
+
+-  *5.2.5 Process Phase 5 Guidance – Build Conceptual Model*
+
+-  *6.2.9 Product 5.1 Guidance – Conceptual Model*
+
+3. **DEFINIÇÕES**
+
+*Conceptual Model* (CM): descrição do conteúdo e das representações
+internas de um modelo, que constituem o entendimento conjunto de
+patrocinadores, usuários e desenvolvedores, incluindo lógica e
+algoritmos, e reconhecendo explicitamente as suposições e limitações.
+
+4. **CONTEÚDO**
+
+Link

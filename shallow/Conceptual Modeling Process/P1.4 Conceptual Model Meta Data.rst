@@ -1,0 +1,184 @@
+1. **OBJETIVO**
+
+O presente documento representa o Product 1.4 - Conceptual Model Meta
+Data, previsto no Conceptual Model Best-Practice Development Process
+emitido pela OTAN.
+
+Os modelos conceituais devem ser armazenados juntamente com seus
+metadados, especificando como eles foram produzidos, ou seja, quando,
+onde, por quem, de quê, usando qual ferramenta, e assim por diante.
+Esses metadados são necessários para garantir a rastreabilidade e
+reutilização dos modelos.
+
+2. **REFERÊNCIAS**
+
+RTO Technical Report MSG-058 – Conceptual Modeling for Military Modeling
+and Simulation:
+
+-  5.2 Conceptual Model Process Description
+
+-  6.2.4 Product 1.4 Guidance – Conceptual Model Meta Data
+
+3. **DEFINIÇÕES**
+
+Conceptual Model (CM): descrição do conteúdo e das representações
+internas de um modelo, que constituem o entendimento conjunto de
+patrocinadores, usuários e desenvolvedores, incluindo lógica e
+algoritmos, e reconhecendo explicitamente as suposições e limitações.
+
+Meta Data: dados sobre um processo, evento ou sistema que são
+fundamentalmente de natureza abstrata. Um conjunto de “dados sobre
+dados” que descrevem as características dos dados; dados ou informações
+sobre o significado dos dados; informações descritivas sobre os dados,
+atividades de dados, sistemas e acervos de uma organização.
+
+Point of Contact (POC): contém informações sobre uma organização ou
+pessoa tendo um papel particular no que diz respeito ao modelo
+conceitual.
+
+MIXR:
+
+Model Idenfication: contém informações relacionadas à identificação de
+um modelo conceitual, como: Nome, Tipo, Versão, Data de Modificação,
+Classificação de Segurança, Restrições de Liberação, Propósito, Domínio
+ao Aplicação, Descrição e Limitação de Uso.
+
+Use History: fornece uma descrição de onde o modelo conceitual foi
+usado.
+
+Reference: especifica um caminho para fontes adicionais de informação,
+como referências a ontologias que são usadas pelo modelo conceitual.
+
+Implementation Dependencies: registro de todas as dependências
+determinadas durante o desenvolvimento do modelo conceitual, como
+ontologias de domínio ou qualquer outro novo conceito.
+
+Key Words: Contém informações sobre as palavras-chave do modelo
+conceitual para uso futuro. Auxilia a busca e a recuperação do modelo
+conceitual em ocasião futura.
+
+Glyph: imagem associada ao modelo conceitual com o objetivo de
+representá-lo visualmente em um repositório web ou paleta de
+ferramentas.
+
+Verification & Validation (V&V) Data Elements: O processo de V&V pode
+produzir uma enorme quantidade de dados. Esses dados são coletados sob
+um rótulo denominado V&V Data Elements.
+
+4. **CONTEÚDO**
+
+   1. **POC**
+
+Maj Av Diego Geraldo: Project Manager
+
+Subdivisão de Sistemas de Apoio à Decisão (ECR-A)
+
+Instituto de Estudos Avançados (IEAv)
+
+**4.2. MODEL IDENTIFICATION**
+
+Nome: Modelos Conceituais Fase 1 Projeto ASA
+
+Tipo: Diagramas UML
+
+Versão: 1.0
+
+Data de Modificação: Jun/2021
+
+Classificação de Segurança: Ostensivo
+
+Restrições de Lançamento: Não há
+
+Propósito: Apoiar a metodologia de Planejamento Baseado em Capacidades
+(PBC) do Estado-Maior da Aeronáutica (EMAER) a partir de simulações
+construtivas.
+
+Domínio de Aplicação: Aéreo e terrestre
+
+Descrição: Diagramas UML com possíveis detalhamentos na forma de texto,
+código ou pseudo-código.
+
+Limitação de Uso: Modelos simplificados que apresentam somente as
+informações necessárias e suficientes para que um desenvolvedor de
+software seja capaz de implementá-los no framework MIXR.
+
+**4.3. USE HISTORY**
+
+Os modelos conceituais ainda não foram utilizados.
+
+**4.4. REFERENCE**
+
+Não há.
+
+**4.5. IMPLEMENTATION DEPENDENCIES**
+
+Não há.
+
+**4.6 KEY WORD**
+
+Aeronave multimissão, aeronave de alerta antecipado, sistema de defesa
+área, míssil ar-ar, bomba para fins gerais, radar, RWR, datalink.
+
+**4.7 GLYPH**
+
+Multirole Combat Aircraft (MRCA):
+
+.. image:: media/P14ConceptualModelMetaData/media/image1.png
+   :alt: fighter Icon 2427930
+   :width: 0.94792in
+   :height: 0.94792in
+
+Airborne Early Warning (AEW):
+
+.. image:: media/P14ConceptualModelMetaData/media/image2.png
+   :alt: Airplane Icon 3091433
+   :width: 0.91667in
+   :height: 0.91667in
+
+Air-to-Air Missile (AAM):
+
+.. image:: media/P14ConceptualModelMetaData/media/image3.png
+   :width: 0.90694in
+   :height: 0.90694in
+
+General-Purpose Bomb:
+
+.. image:: media/P14ConceptualModelMetaData/media/image4.png
+   :alt: Bomb Icon 193646
+   :width: 0.88542in
+   :height: 0.88542in
+
+Ground-Based Air Defense (GBAD):
+
+.. image:: media/P14ConceptualModelMetaData/media/image5.png
+   :alt: Patriot Anti Missile Launcher Icons - Download Free Vector
+   Icons \| Noun Project
+   :width: 0.97917in
+   :height: 0.97917in
+
+Air Defense Radar (ADR):
+
+.. image:: media/P14ConceptualModelMetaData/media/image6.png
+   :width: 0.94792in
+   :height: 0.80625in
+
+Air Surveillance Radar (ASR):
+
+.. image:: media/P14ConceptualModelMetaData/media/image7.png
+   :width: 0.97778in
+   :height: 0.80417in
+
+**4.8 V&V DATA ELEMENTS**
+
+Os Modelos Conceituais Fase 1 Projeto ASA foram submetidos à validação
+do IAOP, de acordo com uma determinação do EMAER.
+
+Os especialistas operacionais do IAOP puderam acompanhar a fase de
+desenvolvimento dos modelos por meio de interações (e.g., reuniões,
+apresentações, questionários, workshops) com o corpo técnico do Projeto
+ASA.
+
+Os resultados do processo de V&V conduzidos pelo IAOP, bem como as
+recomendações de uso dos modelos, estão expressos em um documento formal
+de âmbito interno ao COMAER, disponível no repositório de arquivos do
+Projeto ASA.

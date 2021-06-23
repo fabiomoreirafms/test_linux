@@ -1,0 +1,247 @@
+1. **OBJETIVO**
+
+O objetivo do presente documento é dar cumprimento ao Process Activity
+1.1 - Identify and Map Stakeholder Responsibilities, previsto no
+Conceptual Model Best-Practice Development Process emitido pela OTAN.
+
+Este documento identifica e associa os Stakeholders a papéis e
+responsabilidades no processo de desenvolvimento do Conceptual Model,
+visando à derivação de requisitos e necessidades dos Stakeholders e à
+identificação de experiência no assunto para aquisição de conhecimento.
+
+2. **REFERÊNCIAS**
+
+RTO Technical Report MSG-058 – Conceptual Modeling for Military Modeling
+and Simulation:
+
+-  4.3.2 Main Categories of Stakeholders
+
+-  4.3.3 Use Case Description of a Conceptual Model Development Process
+
+-  4.3.4 Stakeholders Responsibilities
+
+-  5.2.1 Process Phase 1 Guidance – Initiate Conceptual Model
+   Development;
+
+-  6.2.1 Product 1.1 Guidance – Stakeholder Description;
+
+-  Table G-2: Conceptual Model Process Activity 1.1 Description.
+
+3. **DEFINIÇÕES**
+
+Conceptual Model (CM): descrição do conteúdo e das representações
+internas de um modelo, que constituem o entendimento conjunto de
+patrocinadores, usuários e desenvolvedores, incluindo lógica e
+algoritmos, e reconhecendo explicitamente as suposições e limitações.
+
+Conceptual Primitives: componentes elementares a partir dos quais
+elementos de ordem superior podem ser construídos. Exemplos: objeto,
+sinal, evento, atributo, mensagem.
+
+Model Kind: tipo ou classe de modelo: Exemplo: dinâmico, estático,
+estrutural, orientado a objeto, orientado a processo.
+
+Need Statement: declaração de um problema usada para reunir e resumir
+três pontos: um usuário, sua necessidade, e por que a necessidade é
+importante para esse usuário.
+
+Stakeholder: pessoas ou organizações que podem ser afetadas por um
+processo ou produto.
+
+Subject-Matter Expert (SME): especialista em determinado assunto.
+
+Validation: processo de determinar se as abstrações assumidas na
+concepção dos modelos são adequadas e permitidas aos intentos da
+simulação.
+
+Verification: processo de determinar se um modelo ou implementação de
+simulação representa com precisão a descrição e a especificação
+conceitual do desenvolvedor.
+
+4. **CONTEÚDO**
+
+Os stakeholders referentes às atividades de Modelagem e Simulação da
+Fase 1 do Projeto ASA, juntamente com suas definições, atribuições e
+correspondente mapeamento organizacional, são listados a seguir. Eles
+foram identificados a partir das categorias propostas no documento de
+referência, a saber: Sponsor, Producer, Custodian, Consumer e Evaluator.
+
+**4.1 SPONSOR**
+
+**4.1.1 Definição**
+
+Pessoa ou organização que identifica a necessidade de modelagem e
+simulação na solução de um problema, por exemplo, a especificação de um
+requisito operacional ou a análise de uma capacidade.
+
+**4.1.2 Atribuições**
+
+-  Definir os propósitos da atividade de Modelagem e Simulação;
+
+-  Definir os cenários a serem simulados e analisados;
+
+-  Tomar decisões consensuais, juntamente com o Project Manager,
+   referentes à formulação do problema, que impactem no design dos CM;
+
+-  Certificar que os CM produzidos representam informações necessárias e
+   suficientes sobre as questões operacionais e o contexto dos cenários
+   de interesse (escopo correto);
+
+-  Aprovar os CM produzidos para uso do Consumer;
+
+-  Atribuir crédito aos resultados das análises.
+
+**4.1.3 Mapeamento organizacional**
+
+Estado-Maior da Aeronáutica (EMAER), especificamente, os elementos da 6ª
+Subchefia envolvidos com as atividades do Planejamento Baseado em
+Capacidades (PBC).
+
+**4.2 PRODUCER**
+
+**4.2.1 Definição**
+
+Pessoa ou organização que envidará esforços a fim de atender as
+necessidades do Sponsor. O Producer realiza atividades relacionadas ao
+gerenciamento do projeto e ao desenvolvimento dos CM. Essa categoria de
+Stakeholder contempla, além do Project Manager, as seguintes figuras:
+Military SME, Modeling SME e Knowledge Engineer, que, em conjunto,
+constituem a figura do Developer.
+
+**4.2.2 Atribuições**
+
+Do Project Manager:
+
+-  Identificar os Stakeholders, definir suas atribuições e comunicá-los
+   a respeito de seus papeis e responsabilidades;
+
+-  Clarificar os objetivos da atividade de Modelagem e Simulação junto
+   ao Sponsor;
+
+-  Produzir, em acordo com o Sponsor, um Need Statement;
+
+-  Especificar os recursos disponíveis (orçamento, tempo, homens-ano);
+
+-  Elaborar um plano de execução para o projeto;
+
+-  Tomar decisões consensuais, juntamente com o Sponsor, referentes à
+   formulação do problema, que impactem no design dos modelos;
+
+-  Atribuir papéis ao time do projeto.
+
+Do Developer:
+
+-  Elicitar, analisar e documentar os requisitos do projeto;
+
+-  Especificar os conhecimentos necessários (knowledge needs) a partir
+   dos requisitos;
+
+-  Identificar as fontes de conhecimento autorizadas pelo Sponsor;
+
+-  Reunir, estruturar e documentar os conhecimentos necessários;
+
+-  Definir os ‘Conceptual Primitives’ e ‘Model Kinds’ adequados para
+   representar os conhecimentos obtidos;
+
+-  Definir o formalismo e a notação adequados para a documentação dos
+   CM;
+
+-  Delinear os CM considerando as políticas adotadas e o conhecimento
+   elicitado;
+
+-  Documentar os CM;
+
+-  Submeter os CM ao repositório para usos futuros.
+
+**4.2.3 Mapeamento organizacional**
+
+Subdivisão de Sistemas de Apoio à Decisão (ECR-A), da Divisão de C4ISR
+(EC4ISR), do Instituto de Estudos Avançados (IEAv), e Instituto de
+Aplicações Operacionais (IAOP); Gerente do Projeto ASA; Adjunto ao
+Gerente do Projeto ASA.
+
+**4.3 CUSTODIAN**
+
+**4.3.1 Definição**
+
+   Pessoa ou organização que garante a manutenção de um repositório de
+   CM e o cumprimento das políticas organizacionais (formalismos,
+   notações, etc).
+
+   Em uma organização em que o desenvolvimento de CM seja uma atividade
+   recorrente, passa a ser importante compor e manter um repositório
+   para armazenar os resultados de desenvolvimento anteriores, a fim de
+   que possam ser usados novamente em aplicações futuras.
+
+   **4.3.2 Atribuições**
+
+-  Prover serviços relacionados ao repositório: armazenamento, busca,
+   recuperação, atualização e descarte;
+
+-  Manter um catálogo atualizado do conteúdo do repositório.
+
+**4.3.3 Mapeamento organizacional**
+
+   ECR-A e o Núcleo Corporativo de TI (NCTI) do Departamento de Ciência
+   e Tecnologia Aeroespacial (DCTA).
+
+**4.4 CONSUMER**
+
+**4.4.1 Definição**
+
+   Pessoa ou organização que usará efetivamente os CM a fim de
+   implementar um modelo executável que atenda às necessidades do
+   Sponsor.
+
+   **4.4.2 Atribuições**
+
+-  Analisar os CM a fim de compreender as questões operacionais e o
+   contexto dos cenários a serem simulados;
+
+-  Utilizar os CM como base para a implementação de modelos executáveis,
+   ou seja, da simulação propriamente dita;
+
+-  Produzir análises relevantes a partir das simulações.
+
+**4.4.3 Mapeamento organizacional**
+
+   ECR-A.
+
+**4.5 EVALUATOR**
+
+**4.5.1 Definição**
+
+   Pessoa ou organização que submete os CM a um processo de Verificação
+   e Validação a fim de atestar a conformidade com os requisitos.
+
+   **4.5.2 Atribuições**
+
+-  Estabelecer os critérios e procedimentos de validação e verificação;
+
+-  Revisar e avaliar os CM produzidos;
+
+-  Aprovar os CM para que sejam adicionados ao repositório.
+
+**4.5.3 Mapeamento organizacional**
+
+   ECR-A e IAOP.
+
++------------------------------+---------------------------------------+
+|                              |                                       |
++------------------------------+---------------------------------------+
+|                              |                                       |
++------------------------------+---------------------------------------+
+|                              |                                       |
++------------------------------+---------------------------------------+
+|                              |                                       |
++------------------------------+---------------------------------------+
+|                              |                                       |
++------------------------------+---------------------------------------+
+|                              |                                       |
++------------------------------+---------------------------------------+
+|                              |                                       |
++------------------------------+---------------------------------------+
+|                              |                                       |
++------------------------------+---------------------------------------+
+|                              |                                       |
++------------------------------+---------------------------------------+

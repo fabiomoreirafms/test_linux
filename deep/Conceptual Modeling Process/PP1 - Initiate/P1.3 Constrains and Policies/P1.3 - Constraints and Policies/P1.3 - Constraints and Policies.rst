@@ -1,0 +1,160 @@
+1. **OBJETIVO**
+
+O objetivo do presente documento é dar cumprimento ao Process Activity
+1.3 - Identify Constraints on the M&S Effort e ao Process Activity 1.4 -
+Impose Mandatory Enterprise Policies, previstos no Conceptual Model
+Best-Practice Development Process emitido pela OTAN.
+
+Este documento define as restrições e políticas a serem aplicadas ao
+esforço do Conceptual Model com base na direção e escopo das
+organizações envolvidas. O documento serve como um conjunto de
+restrições e políticas que impactam os requisitos e necessidades de
+conhecimento.
+
+2. **REFERÊNCIAS**
+
+RTO Technical Report MSG-058 – Conceptual Modeling for Military Modeling
+and Simulation:
+
+-  5.2.1.3 PA1.3 - Identify Constraints on the M&S Efforts;
+
+-  5.2.1.4 PA1.4 - Impose Mandatory Enterprise Policies;
+
+-  6.2.3 Product 1.3 Guidance – Constraints and Policies.
+
+-  Portaria Normativa do Ministério da Defesa n° 1.814/MD, de 13 de
+   junho de 2013.
+
+-  Ofício 25/6SC3/49053, do EMAER, de 12 de agosto de 2020.
+
+-  Ata de Reunião 01/F2/ASA de 16 de setembro de 2020.
+
+3. **DEFINIÇÕES**
+
+..
+
+   Architecture: estrutura de componentes em um programa ou sistema,
+   seus inter-relacionamentos e as principais diretrizes governando seu
+   projeto e evolução ao longo do tempo.
+
+   Conceptual Model (CM): descrição do conteúdo e das representações
+   internas de um modelo, que constituem o entendimento conjunto de
+   patrocinadores, usuários e desenvolvedores, incluindo lógica e
+   algoritmos, e reconhecendo explicitamente as suposições e limitações.
+
+   Enterprise: uma ou mais organizações submetidas, de alguma maneira, a
+   um controle comum.
+
+   MIXR – Mixed-reality Simulation Platform, framework de simulação open
+   source desenvolvido por pesquisadores do Air Force Institute of
+   Technology (AFIT), que auxilia engenheiros e desenvolvedores de
+   software a criar protótipos e construir aplicações baseadas em
+   simulações virtuais e/ou construtivas de maneira rápida, escalável e
+   distribuída.
+
+Simulation Space (SS): domínio relativo à concepção e implementação da
+simulação em si.
+
+4. **CONTEÚDO**
+
+Para que seja possível identificar as restrições e as políticas
+institucionais com impacto direto ou indireto no Projeto ASA (Fase 1),
+convém:
+
+1. Listar a **composição assumida** da Enterprise na qual o projeto está
+   inserido, isto é, o conjunto de organizações (ou partes de suas
+   estruturas) que, de alguma forma, podem influenciar nas atividades de
+   M&S realizadas no escopo da Fase 1 do ASA;
+
+2. Especificar as restrições e/ou políticas, sejam elas explícitas,
+   inferidas ou assumidas, decorrentes de cada elemento da Enterprise.
+
+**4.1 ENTERPRISE DA FASE DO PROJETO ASA**
+
+**4.1.1 Ministério da Defesa (MD)**
+
+O MD estabeleceu por meio da Portaria Normativa n° 1.814/MD, de 13 de
+junho de 2013, que: “Os simuladores que venham a ser obtidos
+(desenvolvidos ou comprados) a partir da data de publicação desta
+Portaria Normativa deverão utilizar a arquitetura High Level
+Architecture (HLA) e atender às normas do Institute of Electrical and
+Electronic Engineers (IEEE) 1516.X”.
+
+Portanto, muito embora o projeto tenha por objetivo desenvolver um
+protótipo a fim de demonstrar o domínio de tecnologias em simulação, a
+solução técnica adotada no Simulation Space do ASA deverá possuir
+provisão para interoperar com outros sistemas de simulação por meio do
+protocolo HLA.
+
+**4.1.2 Estado-Maior da Aeronáutica (EMAER)**
+
+De acordo com o Ofício 25/6SC3/49053 de 12 de agosto de 2020, e a Ata de
+Reunião 01/F2/ASA de 16 de setembro de 2020, o EMAER espera que o ASA
+possa vir a ser integrado ao Sistema de Planejamento e Condução de
+Operações Aéreas (SPCOA), em desenvolvimento pelo Centro de Computação
+da Aeronáutica de São José dos Campos (CCA-SJ), na forma de uma máquina
+de simulação.
+
+Como o módulo de simulação do SPCOA ainda não foi formalmente iniciado,
+também não foi possível a obtenção de especificações técnicas junto ao
+CCA-SJ que pudessem balizar os desenvolvimentos do ASA. De qualquer
+forma, de acordo com orientações do próprio EMAER, a gerência do ASA
+deverá interagir com o CCA-SJ, fornecendo, sempre que possível,
+documentações técnicas atualizadas do ASA que possam facilitar a
+integração dos sistemas em um futuro próximo.
+
+**4.1.3 Departamento de Ciência e Tecnologia Aeroespacial (DCTA)**
+
+Apesar de ser o responsável pela supervisão do projeto, o DCTA não
+possui legislações em seu âmbito versando especificamente sobre
+simulação, nem tampouco emitiu diretivas que pudessem impactar na
+definição de características técnicas para o ASA.
+
+**4.1.4 Instituto de Estudos Avançados (IEAv)**
+
+O Projeto ASA não poderá se comprometer a entregar uma solução voltada
+para usuários finais, uma vez que o IEAv não teria as provisões
+institucionais adequadas para garantir a distribuição, a manutenção e o
+suporte ao uso do sistema.
+
+Além disso, como a missão institucional do IEAv preconiza o
+desenvolvimento de pesquisas básica e aplicada, ainda que o ASA tenha
+por objetivo atender a demandas específicas do EMAER com foco no
+Planejamento Baseado em Capacidades (PBC), a gerência do ASA deverá
+associar, tanto quanto possível, problemas de pesquisa em Inteligência
+Artificial (IA) e Data Science (DS) ao desenvolvimento do projeto em si,
+buscando fortalecer as atividades finalísticas do IEAv.
+
+**4.1.5 Divisão de C4ISR do IEAv (EC4ISR)**
+
+A Divisão de C4ISR almeja o estabelecimento de um repositório de códigos
+de linguagem aberta, como Python e R, que encerrem rotinas reutilizáveis
+e que possam ser empregadas nas diversas linhas de pesquisa da Divisão
+(ex: Sensoriamento Remoto, Processamento de Imagens e Tomada de
+Decisão), evitando retrabalhos e favorecendo a cooperação entre
+projetos/atividades.
+
+Portanto, durante a Fase 1 do ASA, especial atenção deverá ser dada ao
+desenvolvimento coordenado de códigos relacionados à IA e DS que,
+potencialmente, possam ser reutilizados em outras atividades/projetos da
+EC4ISR.
+
+**4.1.6 Subdivisão de Sistemas de Apoio à Divisão (ECR-A)**
+
+A Subdivisão responsável pelo desenvolvimento do ASA possui duas
+políticas que impactam na concepção do ASA:
+
+-  Utilizar, sempre que possível, a Plataforma AEROGRAF no
+      desenvolvimento de projetos e atividades da Subdivisão, a fim de:
+      manter o framework ativo, capacitar cada vez mais técnicos a
+      realizar implementações na plataforma, tornar tangíveis os
+      resultados de pesquisas e estudos, servir de ambiente
+      computacional comum para integração das diversas aplicações
+      desenvolvidas no âmbito da ECR-A;
+
+-  Utilizar, sempre que possível, o framework open source MIXR (Mixed
+      Reality Simulation Platform) em atividades de pesquisa e
+      desenvolvimento que envolvam Modelagem e Simulação, a fim de
+      promover a padronização e a convergência dos esforços da
+      Subdivisão nesse campo, e ainda para que trabalhos futuros ou em
+      andamento possam se aproveitar de desenvolvimentos anteriores.

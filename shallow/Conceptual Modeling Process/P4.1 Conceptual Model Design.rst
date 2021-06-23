@@ -1,0 +1,436 @@
+1. **OBJETIVO**
+
+O objetivo do presente documento/produto é dar cumprimento ao *Process
+Phase 4 Guidance – Design Conceptual Model*, previsto no *Conceptual
+Model Best-Practice Development Process* emitido pela OTAN.
+
+Este documento registra as decisões de projeto do *Conceptual Model* com
+uma justificativa para cada uma delas.
+
+2. **REFERÊNCIAS**
+
+-  *RTO Technical Report MSG-058 – Conceptual Modeling for Military
+   Modeling and Simulation:*
+
+-  *5.2.4 Process Phase 4 Guidance – Design Conceptual Model*
+
+-  *Product 2.1 – Conceptual Model Requirement Specification*
+
+-  *6.2.8 Product 4.1 Guidance – Conceptual Model Design*
+
+3. **DEFINIÇÕES**
+
+-  *Conceptual Model* (CM): descrição do conteúdo e das representações
+   internas de um modelo, que constituem o entendimento conjunto de
+   patrocinadores, usuários e desenvolvedores, incluindo lógica e
+   algoritmos, e reconhecendo explicitamente as suposições e limitações.
+
+-  *Conceptual Primitives*: componentes elementares a partir dos quais
+   elementos de ordem superior podem ser construídos. Exemplos: objeto,
+   sinal, evento, atributo, mensagem.
+
+-  *Formalism*: restrições de forma sobre um conteúdo. A prática ou a
+   doutrina de estrita observância às prescrições ou formas externas.
+
+-  *Model Kind*: tipo ou classe de modelo: Exemplo: dinâmico, estático,
+   estrutural, orientado a objeto, orientado a processo.
+
+-  *Notation*: um sistema de caracteres, símbolos ou expressões
+   abreviadas usados para expressar fatos técnicos ou quantidades.
+
+-  *View*: instância de um tipo ou classe de modelo (Model Kind) com
+   informação selecionada. Por exemplo: diagrama de classes, diagrama de
+   atividade, diagrama de estado, visão operacional, etc.
+
+4. **CONTEÚDO**
+
+**4.1. Registro dos elementos do Conceptual Model.**
+
++-------------+-------------------------+-----------------------------+
+| **          | **Design**              | **Build**                   |
+| Component** |                         |                             |
++=============+=========================+=============================+
+| Conceptual  | Object                  | Component, Vertice, Attack  |
+| Primitives  |                         | Data, Task Order Struct,    |
+|             |                         | Air Vehicle Status Struct,  |
+|             |                         | GBAD Tgt Assmt Struct, Air  |
+|             |                         | Base Status Struct, Tdb,    |
+|             |                         | Emmiter DB Entry, Track,    |
+|             |                         | SensorMsg, Message,         |
+|             |                         | IAAgentState, IAgenteAction |
++-------------+-------------------------+-----------------------------+
+|             | Component               | Simulation, Earth Model,    |
+|             |                         | Atmosphere, Terrain, Tgt    |
+|             |                         | Damage Data, POI, Zone, TAU |
+|             |                         | Shared Data, System,        |
+|             |                         | Player, Dynamics Model,     |
+|             |                         | Route, Steerpoint, Agent    |
++-------------+-------------------------+-----------------------------+
+|             | Player                  | Air Vehicle, Weapon         |
+|             |                         | (Missile, Bomb), Air Base,  |
+|             |                         | C2C, GBAD C2, GBAD Fire     |
+|             |                         | Unit                        |
++-------------+-------------------------+-----------------------------+
+|             | System                  | Gimbal, RF System, Track    |
+|             |                         | Manager, Radio, Datalink,   |
+|             |                         | Nav System                  |
++-------------+-------------------------+-----------------------------+
+|             | Agent                   | General Pilot Agent         |
+|             |                         | (Fighter Agent, AEW Agent), |
+|             |                         | Air Base Agent, Ground      |
+|             |                         | Radar Agent, C2C Agent,     |
+|             |                         | GBAD-C2 Agent, GBAD-FU      |
+|             |                         | Agent                       |
++-------------+-------------------------+-----------------------------+
+| Model Kinds | Diagrama de Objeto      |                             |
++-------------+-------------------------+-----------------------------+
+|             | Diagrama de Classe      |                             |
++-------------+-------------------------+-----------------------------+
+|             | Diagrama de Interação   |                             |
+|             | (Comunicação)           |                             |
++-------------+-------------------------+-----------------------------+
+| Views       | Component               | 00                          |
++-------------+-------------------------+-----------------------------+
+|             | Simulation              | 01                          |
++-------------+-------------------------+-----------------------------+
+|             | Environment             | 02                          |
++-------------+-------------------------+-----------------------------+
+|             | Tactical Scenario       | 03                          |
++-------------+-------------------------+-----------------------------+
+|             | System                  | 04                          |
++-------------+-------------------------+-----------------------------+
+|             | Player                  | 05                          |
++-------------+-------------------------+-----------------------------+
+|             | Air Vehicle             | 06                          |
++-------------+-------------------------+-----------------------------+
+|             | Weapon                  | 07                          |
++-------------+-------------------------+-----------------------------+
+|             | Missile                 | 08                          |
++-------------+-------------------------+-----------------------------+
+|             | Bomb                    | 09                          |
++-------------+-------------------------+-----------------------------+
+|             | General Structs         | 10                          |
++-------------+-------------------------+-----------------------------+
+|             | Air Base                | 11                          |
++-------------+-------------------------+-----------------------------+
+|             | C2 Center               | 12                          |
++-------------+-------------------------+-----------------------------+
+|             | GBAD Fire Unit          | 13                          |
++-------------+-------------------------+-----------------------------+
+|             | GBAD C2                 | 14                          |
++-------------+-------------------------+-----------------------------+
+|             | Dynamics Model          | 15                          |
++-------------+-------------------------+-----------------------------+
+|             | Antenna                 | 16                          |
++-------------+-------------------------+-----------------------------+
+|             | RF Sensor               | 17                          |
++-------------+-------------------------+-----------------------------+
+|             | Radar                   | 18                          |
++-------------+-------------------------+-----------------------------+
+|             | RWR                     | 19                          |
++-------------+-------------------------+-----------------------------+
+|             | Track Manager           | 20                          |
++-------------+-------------------------+-----------------------------+
+|             | Track                   | 21                          |
++-------------+-------------------------+-----------------------------+
+|             | Emission                | 22                          |
++-------------+-------------------------+-----------------------------+
+|             | Messages                | 23                          |
++-------------+-------------------------+-----------------------------+
+|             | Radio                   | 24                          |
++-------------+-------------------------+-----------------------------+
+|             | Datalink                | 25                          |
++-------------+-------------------------+-----------------------------+
+|             | Nav System              | 26                          |
++-------------+-------------------------+-----------------------------+
+|             | Acft Dynamics Flow      | 27                          |
++-------------+-------------------------+-----------------------------+
+|             | Missile Flow            | 28                          |
++-------------+-------------------------+-----------------------------+
+|             | Bomb Flow               | 29                          |
++-------------+-------------------------+-----------------------------+
+|             | RF TxRx Flow            | 30                          |
++-------------+-------------------------+-----------------------------+
+|             | Generic Air Base        | 31                          |
++-------------+-------------------------+-----------------------------+
+|             | Generic C2 Center       | 32                          |
++-------------+-------------------------+-----------------------------+
+|             | Generic Air             | 33                          |
+|             | Surveillance Radar      |                             |
++-------------+-------------------------+-----------------------------+
+|             | Generic Air Defense     | 34                          |
+|             | Radar                   |                             |
++-------------+-------------------------+-----------------------------+
+|             | Generic AEW             | 35                          |
++-------------+-------------------------+-----------------------------+
+|             | Generic Fighter         | 36                          |
++-------------+-------------------------+-----------------------------+
+|             | Generic GBAD-C2         | 37                          |
++-------------+-------------------------+-----------------------------+
+|             | Generic GBAD-FU         | 38                          |
++-------------+-------------------------+-----------------------------+
+|             | Generic Active-Radar    | 39                          |
+|             | Missile                 |                             |
++-------------+-------------------------+-----------------------------+
+|             | Agent                   | 100                         |
++-------------+-------------------------+-----------------------------+
+|             | General Pilot Agent     | 101                         |
++-------------+-------------------------+-----------------------------+
+|             | Pilot Agent TAU Data    | 102                         |
++-------------+-------------------------+-----------------------------+
+|             | Fighter Pilot Agent     | 103                         |
++-------------+-------------------------+-----------------------------+
+| Formalisms  | UML, MIXR, ASA          |                             |
+|             | Interface               |                             |
++-------------+-------------------------+-----------------------------+
+| Notations   | UML                     |                             |
++-------------+-------------------------+-----------------------------+
+
+**4.2. Justificativa das decisões de projeto com rastreabilidade aos
+requisitos.**
+
+Os elementos do *Conceptual Model* apresentados na seção 4.1 foram
+criados com o intuito de atender aos requisitos ASA-CMR-001,
+ASA-CMR-002, ASA-CMR-003, ASA-CMR-004, ASA-CMR-005, ASA-CMR-006,
+ASA-CMR-007, ASA-CMR-008, ASA-CMR-009, ASA-CMR-010, ASA-CMR-011,
+ASA-CMR-012, ASA-CMR-013, ASA-CMR-014, ASA-CMR-015, ASA-CMR-016,
+ASA-CMR-017, ASA-CMR-018, ASA-CMR-019, ASA-CMR-020, ASA-CMR-021,
+ASA-CMR-022, ASA-CMR-023, ASA-CMR-024, ASA-CMR-025, ASA-CMR-026,
+ASA-CMR-027, ASA-CMR-028, ASA-CMR-029, ASA-CMR-030, ASA-CMR-031,
+ASA-CMR-032, ASA-CMR-033, ASA-CMR-034, ASA-CMR-035, ASA-CMR-036,
+ASA-CMR-037, ASA-CMR-038, ASA-CMR-039, ASA-CMR-040 descritos no
+documento/produto P2.1 – *Conceptual Model Requirement Specification*.
+
+O requisito ASA-CMR-001 está associado com os elementos: Component,
+Vertice, Attack Data, Task Order Struct, Air Vehicle Status Struct, GBAD
+Tgt Assmt Struct, Air Base Status Struct, Tdb, Emmiter DB Entry, Track,
+SensorMsg, Message, IAAgentState, IAgenteAction, Simulation, Earth
+Model, Atmosphere, Terrain, Tgt Damage Data, POI, Zone, TAU Shared Data,
+System, Player, Dynamics Model, Route, Steerpoint, Agent, Air Vehicle,
+Weapon (Missile, Bomb), Air Base, C2C, GBAD C2, GBAD Fire Unit, Gimbal,
+RF System, Track Manager, Radio, Datalink, Nav System, General Pilot
+Agent, Air Base Agent, Ground Radar Agent, C2C Agent, GBAD-C2 Agent,
+GBAD-FU Agent.
+
+O requisito ASA-CMR-002 está associado com os elementos: Component,
+Vertice, Attack Data, Task Order Struct, Air Vehicle Status Struct, GBAD
+Tgt Assmt Struct, Air Base Status Struct, Tdb, Emmiter DB Entry, Track,
+SensorMsg, Message, IAAgentState, IAgenteAction, Simulation, Earth
+Model, Atmosphere, Terrain, Tgt Damage Data, POI, Zone, TAU Shared Data,
+System, Player, Dynamics Model, Route, Steerpoint, Agent, Air Vehicle,
+Weapon (Missile, Bomb), Air Base, C2C, GBAD C2, GBAD Fire Unit, Gimbal,
+RF System, Track Manager, Radio, Datalink, Nav System, General Pilot
+Agent, Air Base Agent, Ground Radar Agent, C2C Agent, GBAD-C2 Agent,
+GBAD-FU Agent.
+
+O requisito ASA-CMR-003 está associado com os elementos: Component,
+Vertice, Attack Data, Task Order Struct, Air Vehicle Status Struct, GBAD
+Tgt Assmt Struct, Air Base Status Struct, Tdb, Emmiter DB Entry, Track,
+SensorMsg, Message, IAAgentState, IAgenteAction, Simulation, Earth
+Model, Atmosphere, Terrain, Tgt Damage Data, POI, Zone, TAU Shared Data,
+System, Player, Dynamics Model, Route, Steerpoint, Agent, Air Vehicle,
+Weapon (Missile, Bomb), Air Base, C2C, GBAD C2, GBAD Fire Unit, Gimbal,
+RF System, Track Manager, Radio, Datalink, Nav System, General Pilot
+Agent, Air Base Agent, Ground Radar Agent, C2C Agent, GBAD-C2 Agent,
+GBAD-FU Agent.
+
+O requisito ASA-CMR-004 está associado com os elementos: Component,
+Vertice, Attack Data, Task Order Struct, Air Vehicle Status Struct, GBAD
+Tgt Assmt Struct, Air Base Status Struct, Tdb, Emmiter DB Entry, Track,
+SensorMsg, Message, IAAgentState, IAgenteAction, Simulation, Earth
+Model, Atmosphere, Terrain, Tgt Damage Data, POI, Zone, TAU Shared Data,
+System, Player, Dynamics Model, Route, Steerpoint, Agent, Air Vehicle,
+Weapon (Missile, Bomb), Air Base, C2C, GBAD C2, GBAD Fire Unit, Gimbal,
+RF System, Track Manager, Radio, Datalink, Nav System, General Pilot
+Agent, Air Base Agent, Ground Radar Agent, C2C Agent, GBAD-C2 Agent,
+GBAD-FU Agent.
+
+O requisito ASA-CMR-005 está associado com os elementos: Component,
+Vertice, Attack Data, Task Order Struct, Air Vehicle Status Struct, GBAD
+Tgt Assmt Struct, Air Base Status Struct, Tdb, Emmiter DB Entry, Track,
+SensorMsg, Message, IAAgentState, IAgenteAction, Simulation, Earth
+Model, Atmosphere, Terrain, Tgt Damage Data, POI, Zone, TAU Shared Data,
+System, Player, Dynamics Model, Route, Steerpoint, Agent, Air Vehicle,
+Weapon (Missile, Bomb), Air Base, C2C, GBAD C2, GBAD Fire Unit, Gimbal,
+RF System, Track Manager, Radio, Datalink, Nav System, General Pilot
+Agent, Air Base Agent, Ground Radar Agent, C2C Agent, GBAD-C2 Agent,
+GBAD-FU Agent.
+
+O requisito ASA-CMR-006 está associado diretamente com os elementos:
+POI, Zone, Air Vehicle, Air Base, C2C, GBAD C2, GBAD Fire Unit, General
+Pilot Agent, Air Base Agent, Ground Radar Agent, C2C Agent, GBAD-C2
+Agent, GBAD-FU Agent, Weapon (Missile, Bomb).
+
+O requisito ASA-CMR-007 está associado diretamente com os elementos: Air
+Vehicle, Air Base, C2C, GBAD C2, GBAD Fire Unit, General Pilot Agent,
+Air Base Agent, Ground Radar Agent, C2C Agent, GBAD-C2 Agent, GBAD-FU
+Agent.
+
+O requisito ASA-CMR-008 está associado diretamente com os elementos:
+Simulation, POI, Zone, Air Vehicle, Air Base, C2C, GBAD C2, GBAD Fire
+Unit, General Pilot Agent, Air Base Agent, Ground Radar Agent, C2C
+Agent, GBAD-C2 Agent, GBAD-FU Agent, Weapon (Missile, Bomb).
+
+O requisito ASA-CMR-009 está associado diretamente com os elementos:
+Simulation, POI, Zone, Air Vehicle, Air Base, C2C, GBAD C2, GBAD Fire
+Unit, General Pilot Agent, Air Base Agent, Ground Radar Agent, C2C
+Agent, GBAD-C2 Agent, GBAD-FU Agent, Weapon (Missile, Bomb).
+
+O requisito ASA-CMR-010 está associado diretamente com os elementos: Air
+Vehicle (Fighter), General Pilot Agent (Fighter Agent), Weapon
+(Missile).
+
+O requisito ASA-CMR-011 está associado diretamente com os elementos: Air
+Vehicle (Fighter), General Pilot Agent (Fighter Agent), Weapon (Bomb).
+
+O requisito ASA-CMR-012 está associado diretamente com os elementos: Air
+Vehicle (Fighter), General Pilot Agent (Fighter Agent).
+
+O requisito ASA-CMR-013 está associado diretamente com os elementos: Air
+Vehicle (Fighter), General Pilot Agent (Fighter Agent).
+
+O requisito ASA-CMR-014 está associado diretamente com os elementos: Air
+Vehicle (Fighter), General Pilot Agent (Fighter Agent).
+
+O requisito ASA-CMR-015 está associado diretamente com os elementos: Air
+Vehicle (Fighter), General Pilot Agent (Fighter Agent).
+
+O requisito ASA-CMR-016 está associado diretamente com os elementos: Air
+Vehicle (Fighter), General Pilot Agent (Fighter Agent), Weapon
+(Missile).
+
+O requisito ASA-CMR-017 está associado diretamente com os elementos:
+Player, Air Vehicle (Fighter), Dynamics Model, Nav System.
+
+O requisito ASA-CMR-018 está associado diretamente com o elemento: Air
+Vehicle (Fighter), Gimbal (ScanGimbal, Antenna), RF System (Radar, RWR),
+Track Manager, Radio, Datalink, Weapon (Missile, Bomb).
+
+O requisito ASA-CMR-019 está associado diretamente com os elementos: Air
+Vehicle (Fighter), Weapon (Missile).
+
+O requisito ASA-CMR-020 está associado diretamente com os elementos: Air
+Vehicle (Fighter), Weapon (Bomb).
+
+O requisito ASA-CMR-021 está associado diretamente com os elementos: Air
+Vehicle (Fighter), General Pilot Agent (Fighter Agent).
+
+O requisito ASA-CMR-022 está associado diretamente com os elementos:
+Generic Air Surveillance Radar (ASR) e Generic Air Defense Radar (ADR).
+
+O requisito ASA-CMR-023 está associado diretamente com os elementos:
+GBAD C2, GBAD Fire Unit, GBAD-C2 Agent, GBAD-FU Agent, Weapon (Missile).
+
+O requisito ASA-CMR-024 está associado diretamente com os elementos: Air
+Vehicle (Fighter, AEW), Air Base, C2C, GBAD C2, GBAD Fire Unit, ASR,
+ADR, General Pilot Agent (Fighter Agent, AEW Agent), Air Base Agent,
+Ground Radar Agent, C2C Agent, GBAD-C2 Agent, GBAD-FU Agent.
+
+O requisito ASA-CMR-025 está associado diretamente com os elementos:
+C2C, GBAD C2, GBAD Fire Unit, ASR, ADR, Ground Radar Agent, C2C Agent,
+GBAD-C2 Agent, GBAD-FU Agent.
+
+O requisito ASA-CMR-026 está associado diretamente com os elementos: Air
+Vehicle (AEW), Air Base, C2C, GBAD C2, GBAD Fire Unit, ASR, ADR, General
+Pilot Agent (AEW Agent), Air Base Agent, Ground Radar Agent, C2C Agent,
+GBAD-C2 Agent, GBAD-FU Agent.
+
+O requisito ASA-CMR-027 está associado diretamente com os elementos: Air
+Vehicle (AEW), General Pilot Agent (AEW Agent).
+
+O requisito ASA-CMR-028 está associado diretamente com os elementos: Air
+Vehicle (AEW), General Pilot Agent (AEW Agent).
+
+O requisito ASA-CMR-029 está associado diretamente com os elementos: Air
+Vehicle (AEW), General Pilot Agent (AEW Agent).
+
+O requisito ASA-CMR-030 está associado diretamente com os elementos: Air
+Vehicle (Fighter, AEW), Air Base, C2C, ASR, ADR, General Pilot Agent
+(Fighter Agent, AEW Agent), Air Base Agent, Ground Radar Agent, C2C
+Agent.
+
+O requisito ASA-CMR-031 está associado diretamente com os elementos: Air
+Vehicle (AEW), Air Base, C2C, GBAD C2, GBAD Fire Unit, ASR, ADR, General
+Pilot Agent (AEW Agent), Air Base Agent, Ground Radar Agent, C2C Agent,
+GBAD-C2 Agent, GBAD-FU Agent.
+
+O requisito ASA-CMR-032 está associado diretamente com os elementos: Air
+Vehicle (AEW), Air Base, C2C, GBAD C2, GBAD Fire Unit, ASR, ADR, General
+Pilot Agent (AEW Agent), Air Base Agent, Ground Radar Agent, C2C Agent,
+GBAD-C2 Agent, GBAD-FU Agent.
+
+O requisito ASA-CMR-033 está associado diretamente com os elementos: Air
+Vehicle (AEW), Air Base, C2C, GBAD C2, GBAD Fire Unit, ASR, ADR, General
+Pilot Agent (AEW Agent), Air Base Agent, Ground Radar Agent, C2C Agent,
+GBAD-C2 Agent, GBAD-FU Agent.
+
+O requisito ASA-CMR-034 está associado diretamente com os elementos: Air
+Vehicle (AEW), Air Base, C2C, GBAD C2, GBAD Fire Unit, ASR, ADR, General
+Pilot Agent (AEW Agent), Air Base Agent, Ground Radar Agent, C2C Agent,
+GBAD-C2 Agent, GBAD-FU Agent.
+
+O requisito ASA-CMR-035 está associado diretamente com os elementos:
+UML, Component, Vertice, Attack Data, Task Order Struct, Air Vehicle
+Status Struct, GBAD Tgt Assmt Struct, Air Base Status Struct, Tdb,
+Emmiter DB Entry, Track, SensorMsg, Message, IAAgentState,
+IAgenteAction, Simulation, Earth Model, Atmosphere, Terrain, Tgt Damage
+Data, POI, Zone, TAU Shared Data, System, Player, Dynamics Model, Route,
+Steerpoint, Agent, Air Vehicle, Weapon (Missile, Bomb), Air Base, C2C,
+GBAD C2, GBAD Fire Unit, Gimbal, RF System, Track Manager, Radio,
+Datalink, Nav System, General Pilot Agent, Air Base Agent, Ground Radar
+Agent, C2C Agent, GBAD-C2 Agent, GBAD-FU Agent.
+
+O requisito ASA-CMR-036 está associado diretamente com os elementos:
+MIXR, Component, Vertice, Attack Data, Task Order Struct, Air Vehicle
+Status Struct, GBAD Tgt Assmt Struct, Air Base Status Struct, Tdb,
+Emmiter DB Entry, Track, SensorMsg, Message, IAAgentState,
+IAgenteAction, Simulation, Earth Model, Atmosphere, Terrain, Tgt Damage
+Data, POI, Zone, TAU Shared Data, System, Player, Dynamics Model, Route,
+Steerpoint, Agent, Air Vehicle, Weapon (Missile, Bomb), Air Base, C2C,
+GBAD C2, GBAD Fire Unit, Gimbal, RF System, Track Manager, Radio,
+Datalink, Nav System, General Pilot Agent, Air Base Agent, Ground Radar
+Agent, C2C Agent, GBAD-C2 Agent, GBAD-FU Agent.
+
+O requisito ASA-CMR-037 está associado diretamente com os elementos: ASA
+Interface, Component, Vertice, Attack Data, Task Order Struct, Air
+Vehicle Status Struct, GBAD Tgt Assmt Struct, Air Base Status Struct,
+Tdb, Emmiter DB Entry, Track, SensorMsg, Message, IAAgentState,
+IAgenteAction, Simulation, Earth Model, Atmosphere, Terrain, Tgt Damage
+Data, POI, Zone, TAU Shared Data, System, Player, Dynamics Model, Route,
+Steerpoint, Agent, Air Vehicle, Weapon (Missile, Bomb), Air Base, C2C,
+GBAD C2, GBAD Fire Unit, Gimbal, RF System, Track Manager, Radio,
+Datalink, Nav System, General Pilot Agent, Air Base Agent, Ground Radar
+Agent, C2C Agent, GBAD-C2 Agent, GBAD-FU Agent.
+
+O requisito ASA-CMR-038 está associado diretamente com os elementos:
+MIXR, Component, Vertice, Attack Data, Task Order Struct, Air Vehicle
+Status Struct, GBAD Tgt Assmt Struct, Air Base Status Struct, Tdb,
+Emmiter DB Entry, Track, SensorMsg, Message, IAAgentState,
+IAgenteAction, Simulation, Earth Model, Atmosphere, Terrain, Tgt Damage
+Data, POI, Zone, TAU Shared Data, System, Player, Dynamics Model, Route,
+Steerpoint, Agent, Air Vehicle, Weapon (Missile, Bomb), Air Base, C2C,
+GBAD C2, GBAD Fire Unit, Gimbal, RF System, Track Manager, Radio,
+Datalink, Nav System, General Pilot Agent, Air Base Agent, Ground Radar
+Agent, C2C Agent, GBAD-C2 Agent, GBAD-FU Agent.
+
+O requisito ASA-CMR-039 está associado diretamente com os elementos:
+MIXR, Component, Vertice, Attack Data, Task Order Struct, Air Vehicle
+Status Struct, GBAD Tgt Assmt Struct, Air Base Status Struct, Tdb,
+Emmiter DB Entry, Track, SensorMsg, Message, IAAgentState,
+IAgenteAction, Simulation, Earth Model, Atmosphere, Terrain, Tgt Damage
+Data, POI, Zone, TAU Shared Data, System, Player, Dynamics Model, Route,
+Steerpoint, Agent, Air Vehicle, Weapon (Missile, Bomb), Air Base, C2C,
+GBAD C2, GBAD Fire Unit, Gimbal, RF System, Track Manager, Radio,
+Datalink, Nav System, General Pilot Agent, Air Base Agent, Ground Radar
+Agent, C2C Agent, GBAD-C2 Agent, GBAD-FU Agent.
+
+O requisito ASA-CMR-040 está associado diretamente com os elementos:
+Component, Vertice, Attack Data, Task Order Struct, Air Vehicle Status
+Struct, GBAD Tgt Assmt Struct, Air Base Status Struct, Tdb, Emmiter DB
+Entry, Track, SensorMsg, Message, IAAgentState, IAgenteAction,
+Simulation, Earth Model, Atmosphere, Terrain, Tgt Damage Data, POI,
+Zone, TAU Shared Data, System, Player, Dynamics Model, Route,
+Steerpoint, Agent, Air Vehicle, Weapon (Missile, Bomb), Air Base, C2C,
+GBAD C2, GBAD Fire Unit, Gimbal, RF System, Track Manager, Radio,
+Datalink, Nav System, General Pilot Agent, Air Base Agent, Ground Radar
+Agent, C2C Agent, GBAD-C2 Agent, GBAD-FU Agent.

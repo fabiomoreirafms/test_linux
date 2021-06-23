@@ -1,0 +1,436 @@
+1. **OBJETIVO**
+
+O objetivo do presente documento é dar cumprimento ao Process Activity
+2.1 - Identify, analyse and record CM, Mission and Simulation Space
+Requirements, Process Activity 2.2 - Verify requirements with respect to
+needs, constraints and policies, e Process Activity 2.3 - Synergize CM,
+Mission and Simulation Space Requirements, previstos no Conceptual Model
+Best-Practice Development Process emitido pela OTAN.
+
+A especificação de requisitos do Conceptual Model documenta uma coleção
+de propriedades verificáveis, atributos e características do Modelo
+Conceitual necessária para que ele satisfaça sua finalidade pretendida.
+
+2. **REFERÊNCIAS**
+
+RTO Technical Report MSG-058 – Conceptual Modeling for Military Modeling
+and Simulation:
+
+-  5.2.2.1 PA 2.1 – Identify, Analyze and Record Conceptual Model,
+      Mission and Simulation Space Requirements;
+
+-  6.2.2 Product 2.1 Guidance – Conceptual Model Requirements.
+
+3. **DEFINIÇÕES**
+
+Conceptual Model (CM): descrição do conteúdo e das representações
+internas de um modelo, que constituem o entendimento conjunto de
+patrocinadores, usuários e desenvolvedores, incluindo lógica e
+algoritmos, e reconhecendo explicitamente as suposições e limitações.
+
+Conceptual Model Space (CMS): domínio ao qual a representação do modelo
+conceitual se refere.
+
+Mission Space (MS): domínio relativo às ações, entidades e interações
+representadas pelos modelos dentro de um contexto operacional.
+
+MIXR – Mixed-reality Simulation Platform, framework de simulação open
+source desenvolvido por pesquisadores do Air Force Institute of
+Technology (AFIT), que auxilia engenheiros e desenvolvedores de software
+a criar protótipos e construir aplicações baseadas em simulações
+virtuais e/ou construtivas de maneira rápida, escalável e distribuída.
+
+Requirement: está relacionado aos atributos necessários e suficientes
+para o modelo conceitual conforme determinado. Requisitos prescrevem e
+proscrevem as características do modelo conceitual que, se presentes,
+garantem que o modelo é adequado aos seus usos pretendidos. Dessa forma,
+requisitos devem manifestar os desejos potencialmente discrepantes dos
+stakeholders de forma observável e definida.
+
+Simulation Space (SS): domínio relativo à concepção e implementação da
+simulação em si.
+
+4. **CONTEÚDO**
+
+   1. **REQUISITOS DE MODELAGEM CONCEITUAL PARA A FASE 1 DO ASA**
+
+**4.1.1 Requisitos relacionados ao contexto operacional**
+
+**ASA-CMR-001 (MS)**
+
+**Requisito:** Os modelos conceituais deverão representar a dinâmica de
+ações e eventos de contextos operacionais denominados Composite Air
+Operations (COMAO), nos quais duas forças oponentes, BLUE e RED,
+realizam Ações de Força Aérea típicas desse tipo de emprego do poder
+aéreo.
+
+**ASA-CMR-002 (MS)**
+
+**Requisito:** Os modelos conceituais deverão viabilizar a realização de
+*simulações construtivas* das seguintes ações de Força Aérea nos
+contextos dos COMAO: Ataque, Escolta, Varredura, Alerta de Defesa Aérea
+em Solo, Alerta de Defesa Aérea em Voo, Alarme Aéreo Antecipado, Defesa
+Antiaérea e Vigilância do Espaço Aéreo.
+
+**ASA-CMR-003 (SS)**
+
+**Requisito:** Os modelos conceituais deverão ser capazes de gerar
+informações úteis (apoio à decisão) ao processo de Dimensionamento da
+Força, conduzidos pelo Estado-Maior da Aeronáutica (EMAER) no contexto
+do Planejamento Baseado em Capacidades (PBC).
+
+**4.1.2 Requisitos relacionados às características gerais dos modelos**
+
+**ASA-CMR-004 (CMS)**
+
+**Considerações preliminares**
+
+No contexto do PBC, os modelos representarão possíveis alternativas
+identificadas por especialistas para suprir determinada capacidade,
+chamadas "soluções de força". Tais alternativas, normalmente,
+materializam-se em equipamentos empregados na realização de determinadas
+Ações de Força Aérea (definidas na DCA 1-1); por exemplo, a Ação de
+Força Aérea "Ataque" pode ser realizada por uma aeronave de alta
+performance ("caça"), um VANT, ou um míssil de cruzeiro. Sem perda de
+generalidade, supondo que se decida pela modelagem da alternativa
+"aeronave de alta performance"; então, tal modelo deverá possuir
+características generalistas, isto é, deverá possuir um conjunto de
+atributos que, configurados com diferentes combinações de valores, possa
+representar adequadamente mais de um tipo de aeronave. Isso permitirá
+que se testem aeronaves com diferentes características a partir de um
+mesmo modelo.
+
+**Requisito:** Os modelos deverão possuir características generalistas,
+de maneira que possam representar mais de um tipo de equipamento, por
+meio de diferentes combinações de valores de seus atributos.
+
+**ASA-CMR-005 (CMS)**
+
+**Considerações preliminares**
+
+De acordo com o EMAER, a principal temática abordada pelas simulações
+construtivas no âmbito do PBC será o Dimensionamento da Força. Do ponto
+de vista da simulação, este problema envolve dois aspectos fundamentais:
+quais tipos de meios (e.g., aeronaves, mísseis, radares, etc) deverão
+ser selecionados, dentre uma lista de alternativas, e qual a quantidade
+necessária desses meios para que um determinado nível almejado de
+capacidade seja alcançado.
+
+O problema relacionado à disponibilidade de diferentes tipos de meios
+(na forma de modelos) para a composição de cenários de simulação poderá
+ser solucionado de duas maneiras:
+
+-  por iniciativa do EMAER: ao identificar um determinado meio como
+   potencial "solução de força", o EMAER deverá "encomendar" a
+   elaboração do modelo correspondente junto a uma OM ou empresa com
+   expertise para desenvolvê-lo, como é o caso da Fase 1 do Projeto ASA,
+   na qual o IEAv foi solicitado a desenvolver os modelos de interesse
+   do EMAER;
+
+-  por iniciativa de OM ou empresas: desde que tais instituições possam
+   conhecer os cenários de interesse do EMAER, é possível também que
+   possam entrever algumas "soluções de força" e, posteriormente,
+   desenvolver seus modelos e apresentá-los ao EMAER.
+
+É importante fazer notar que, cada novo modelo desenvolvido deverá
+prever, sempre que aplicável, mecanismos de interoperabilidade com os
+demais modelos já existentes no ambiente de simulação. Por exemplo,
+considere que uma empresa com competência no desenvolvimento de radares
+elabore um novo modelo de radar de vigilância para o ASA; a
+interoperabilidade com os demais modelos só poderá existir se os tracks
+do radar puderem estar acessíveis para outros modelos, por exemplo, para
+aeronaves de defesa aérea, por meio de datalink, ou para um Centro de
+C2, que poderá acionar aeronaves de defesa aérea, etc. Via de regra,
+esse mapeamento de interoperabilidade entre modelos se realiza na fase
+de Modelagem Conceitual.
+
+Com relação ao problema da quantificação de meios para o atingimento de
+um nível de capacidade, basta que os modelos prevejam a criação de
+múltiplas instâncias de seus tipos no ambiente de simulação, desde que
+isto seja factível.
+
+**Requisito:** Cada tipo de modelo conceitual deverá conter, sempre que
+aplicável, previsões de interoperabilidade com os demais modelos
+existentes no mesmo ambiente de simulação.
+
+**ASA-CMR-006 (SS)**
+
+**Requisito:** Os modelos conceituais deverão prever, sempre que
+aplicável, a possibilidade de criação de múltiplas instâncias de seus
+tipos no ambiente de simulação.
+
+**ASA-CMR-007 (MS)**
+
+**Considerações preliminares**
+
+De acordo com a metodologia praticada pelo EMAER no âmbito do PBC, há
+outros critérios relevantes no processo de Dimensionamento da Força além
+da simples provisão de meios em quantidades apropriadas para que uma
+determinada capacidade atinja um nível desejado. Fatores menos
+tangíveis, como aspectos doutrinários e táticos, nível de treinamento
+das tripulações, nível de motivação da tropa, etc., também são
+considerados importantes no contexto do PBC.
+
+Ao avaliar as capacidades atuais da Força por meio de simulações
+construtivas, pode ser que o EMAER venha a identificar algumas
+inconformidades, i.e., capacidades abaixo do nível almejado. Uma
+primeira abordagem, nesse caso, seria investigar possíveis soluções que
+não dependessem, necessariamente, de novas aquisições materiais, mas que
+recaíssem, por exemplo, em mudanças nos procedimentos táticos e/ou
+doutrinários.
+
+**Requisito:** Os modelos deverão incorporar, sempre que aplicável,
+atributos referentes a aspectos táticos e/ou doutrinários que tenham
+impacto na realização das Ações de Força Aérea relacionadas.
+
+**4.1.3 Requisitos relacionados aos outputs esperados**
+
+**ASA-CMR-008 (MS)**
+
+**Requisito:** Os modelos conceituais deverão ser tais que os outputs
+das simulações permitam responder, no mínimo, aos seguintes
+questionamentos operacionais considerados críticos para as análises de
+Dimensionamento da Força/PBC: probabilidade de sucesso da missão e taxa
+de sobrevivência, para cada uma das forças oponentes.
+
+**ASA-CMR-009 (SS)**
+
+**Requisito:** Os modelos conceituais deverão ser tais que as simulações
+viabilizem análises visando à identificação de correlações entre os
+inputs fornecidos aos modelos e os outputs obtidos, de maneira a se
+identificar quais variáveis contribuem mais para os resultados em
+determinados contextos.
+
+**4.1.4 Requisitos específicos de agentes da simulação**
+
+**4.1.4.1 Multirole Combat Aircraft (MRCA)**
+
+**ASA-CMR-010 (MS)**
+
+**Requisito:** As aeronaves de combate deverão ser modeladas tendo em
+vista o contexto de combate BVR (isto é, uma situação tática de
+engajamentos de combate aéreo além do alcance visual), prevendo, por
+exemplo, comportamento para evitar o engajamento por um caça de
+superioridade aérea da força oponente (Threat Reaction).
+
+**ASA-CMR-011 (MS)**
+
+**Requisito:** As aeronaves de combate modeladas devem ser capazes de
+simular o lançamento de bombas sobre alvos localizados no território
+inimigo.
+
+**ASA-CMR-012 (MS)**
+
+**Requisito:** As aeronaves de combate modeladas devem possuir
+comportamento que considere emprego a partir de Combat Air Patrol (CAP).
+
+**ASA-CMR-013 (MS)**
+
+**Requisito:** As aeronaves de combate modeladas devem possuir
+comportamento que considere emprego a partir de Flight Areas of
+Responsibility (FAOR).
+
+**ASA-CMR-014 (MS)**
+
+**Requisito:** As aeronaves de combate modeladas devem ser capazes de
+realizar missões de escolta (Escort).
+
+**ASA-CMR-015 (MS)**
+
+**Requisito:** As aeronaves de combate modeladas devem ser capazes de
+realizar missões de varredura (Sweep).
+
+**ASA-CMR-16 (MS)**
+
+**Requisito:** As aeronaves de combate modeladas devem possuir
+comportamentos que prevejam, no mínimo, os seguintes parâmetros táticos:
+tipo de formação de voo empregada por cada time no engajamento inicial
+(ex: box, vic, champagne, etc), incluindo o perfil vertical; Shot
+Philosophy de cada time ou player; nível de agressividade de cada time
+ou player; e nível de experiência de voo de cada time ou player.
+
+**ASA-CMR-017 (MS)**
+
+**Requisito:** As aeronaves de combate modeladas devem possuir
+características parametrizáveis, tais como velocidade máxima, carga g
+máxima, consumo de combustível, seção reta radar, entre outras.
+
+**ASA-CMR-018 (MS)**
+
+**Requisito:** As aeronaves de combate modeladas devem possuir, no
+mínimo, os seguintes subsistemas: radar de bordo, Radar Warning Receiver
+(RWR), datalink, mísseis ar-ar radar-ativo e bombas de fins gerais.
+
+**ASA-CMR-019 (MS)**
+
+**Requisito:** As aeronaves de combate devem possuir mísseis ar-ar
+radar-ativo com os seguintes atributos: perfil de queima, distância de
+ativação, entre outros.
+
+**ASA-CMR-020 (MS)**
+
+**Requisito:** As aeronaves de combate devem possuir bombas de fins
+gerais com os seguintes atributos: Área Média de Eficácia (AME);
+distância de lançamento (bomb range); e carga explosiva.
+
+**ASA-CMR-021 (MS)**
+
+**Requisito:** As aeronaves de combate modeladas devem possuir
+comportamento que permita a simulação concomitante e coordenada de até
+16 instâncias.
+
+**4.1.4.2 Air Defense System**
+
+**ASA-CMR-022 (MS)**
+
+**Requisito:** O sistema de defesa aérea deve possuir Air Surveillance
+Radars (ASR) e Air Defense Radars (ADR) capazes de detectar as aeronaves
+modeladas.
+
+**ASA-CMR-023 (MS)**
+
+**Requisito:** O sistema de defesa aérea deve possuir Ground-Based Air
+Defenses (GBAD) capazes de engajar as aeronaves modeladas com
+Surface-to-Air Missiles (SAM), com características similares aos
+sistemas S-400/Patriot.
+
+**ASA-CMR-024 (MS)**
+
+**Requisito:** O sistema de defesa aérea deverá ser capaz de considerar
+os seguintes parâmetros táticos: tempo decorrido entre a primeira
+aparição da Sweep nos radares e a classificação dos tracks como hostil;
+tempo decorrido entre a classificação das pistas como hostil e o
+acionamento do alerta; quantidade de aeronaves acionadas por vez; tempo
+decorrido entre o acionamento do alerta e a decolagem das aeronaves; e
+tempo decorrido entre decolagens do alerta na base por localidade.
+
+**ASA-CMR-025 (MS)**
+
+Requisito: O sistema de defesa aéreo modelado deve possuir comportamento
+que permita a simulação concomitante e coordenada de até 2 ASR, 2 ADR e
+2 GBAD.
+
+**4.1.4.3 Airbone Early Warning (AEW)**
+
+**ASA-CMR-026 (MS)**
+
+**Requisito:** As aeronaves de alarme aéreo antecipado modeladas devem
+ser capazes de realizar vigilância do espaço aéreo utilizando seus
+radares embarcados e compartilhar seus tracks com o sistema de defesa
+aérea modelado.
+
+**ASA-CMR-027 (MS)**
+
+**Requisito:** As aeronaves de alarme aéreo antecipado devem possuir
+características semelhantes ao E-99.
+
+**ASA-CMR-028 (MS)**
+
+**Requisito:** As aeronaves de alarme aéreo antecipado deverão ser
+modeladas tendo em vista o contexto de combate BVR, prevendo, por
+exemplo, comportamento para evitar o engajamento por um caça de
+superioridade aérea da força oponente (Threat Reaction).
+
+**ASA-CMR-029 (MS)**
+
+**Requisito:** As aeronaves de alarme aéreo antecipado modeladas devem
+possuir comportamento que permita a simulação concomitante e coordenada
+de até 2 instâncias.
+
+**4.1.5 Requisitos relacionados às métricas de sucesso**
+
+**ASA-CMR-030 (MS)**
+
+**Requisito:** As simulações de cenários relacionadas especificamente a
+missões de Defesa Aérea, Denfesive Counter Air (DCA), deverão ser
+avaliadas de acordo com a seguinte métrica de sucesso: nível de
+afastamento das aeronaves oponentes em relação à região de interesse ao
+longo do tempo.
+
+**ASA-CMR-031 (MS)**
+
+**Requisito:** As simulações de cenários COMAO deverão ser avaliadas de
+acordo com a seguinte métrica de sucesso: proporção de aeronaves
+oponentes que cruzaram a linha de contato sem ser detectadas.
+
+**ASA-CMR-032 (MS)**
+
+**Requisito:** As simulações de cenários COMAO deverão ser avaliadas de
+acordo com a seguinte métrica de sucesso: proporção de aeronaves
+oponentes que cruzaram a linha de contato sem ser classificadas como
+hostis.
+
+**ASA-CMR-033 (MS)**
+
+**Requisito:** As simulações de cenários COMAO deverão ser avaliadas de
+acordo com a seguinte métrica de sucesso: proporção de aeronaves
+oponentes que alcançaram as regiões sensíveis.
+
+**ASA-CMR-034 (MS)**
+
+**Requisito:** As simulações de cenários COMAO deverão ser avaliadas de
+acordo com a seguinte métrica de sucesso: tempo decorrido até que todas
+as aeronaves oponentes no interior de seu território tenham sido
+engajadas.
+
+**4.1.6 Requisitos relacionados a formalismos, ferramentas obrigatórias
+e políticas organizacionais**
+
+**ASA-CMR-035 (CMS)**
+
+**Requisito:** Os modelos conceituais deverão ser descritos, idealmente,
+por meio de diagramas em linguagem Unified Modeling Language (UML)
+juntamente com textos explicativos em língua portuguesa (Brasil).
+Adicionalmente, outros recursos, como figuras, gráficos, diagramas,
+etc., poderão ser empregados com o intuito de ampliar a compreensão das
+ideias encerradas no modelo. A clareza deverá prevalecer sobre o
+formalismo.
+
+**ASA-CMR-036 (SS)**
+
+**Requisito:** Os modelos conceituais deverão ser tais que seja possível
+implementá-los e executá-los a partir do framework MIXR.
+
+**ASA-CMR-037 (SS)**
+
+**Requisito:** Os modelos conceituais deverão ser desenvolvidos sob a
+premissa de que a interface de usuário para edição e visualização dos
+cenários será o ASA. Para maiores informações sobre as capacidades do
+ASA, consultar o documento Visão do Negócio.
+
+**4.1.7 Requisitos de desempenho**
+
+**ASA-CMR-038 (SS)**
+
+**Requisito:** Os modelos conceituais deverão ser desenvolvidos sob a
+premissa de que serão executados com taxa de atualização de no mínimo 60
+Hz, de forma a também possibilitar seu uso em simulações virtuais
+futuramente.
+
+**ASA-CMR-039 (SS)**
+
+**Requisito:** Os modelos conceituais deverão suportar execução em
+diferentes velocidades de reprodução (1x, 10x, etc).
+
+**4.1.8 Requisitos relacionados à validação e aceitação dos modelos**
+
+**ASA-CMR-040 (CMS)**
+
+**Requisito:** Os modelos conceituais desenvolvidos deverão ter validade
+atestada por meio do seguinte critério: possibilidade de realizar um
+conjunto de simulações que produzam informações úteis ao processo de
+Dimensionamento da Força, segmentadas nas seguintes etapas:
+
+-  Diagnóstico: avaliação das capacidades atuais e em obtenção por meio
+   da simulação de cenários de interesse;
+
+-  Soluções não materiais: possibilidade de alterar os parâmetros
+   doutrinários e táticos dos modelos e mensurar os efeitos nos
+   resultados;
+
+-  Soluções materiais existentes: possibilidade de alterar os parâmetros
+   dos modelos a fim de representarem a modernização ou a melhoria de
+   equipamentos existentes;
+
+-  Soluções materiais novas: possibilidade de alterar os parâmetros dos
+   modelos a fim de representarem novas aquisições ou desenvolvimento.

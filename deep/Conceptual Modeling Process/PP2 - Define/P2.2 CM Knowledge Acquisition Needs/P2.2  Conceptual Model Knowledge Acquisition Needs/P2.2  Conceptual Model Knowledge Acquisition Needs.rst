@@ -1,0 +1,291 @@
+1. **OBJETIVO**
+
+O objetivo do presente documento é dar cumprimento ao Process Activity
+2.4 - Derive Mission and Simulation Space Knowledge Needs, previsto no
+Conceptual Model Best-Practice Development Process emitido pela OTAN.
+
+As necessidades de aquisição de conhecimento do Conceptual Model
+descrevem o escopo e o nível de detalhe de conhecimento necessário ao
+desenvolvedor para produzir um modelo que satisfaça a declaração de
+necessidade do cliente.
+
+2. **REFERÊNCIAS**
+
+RTO Technical Report MSG-058 – Conceptual Modeling for Military Modeling
+and Simulation:
+
+-  5.2.2.4 PA2.4 – Derive Mission and Simulation Space Knowledge Needs;
+
+-  6.2.6 Product 2.2 Guidance – Conceptual Model Knowledge Acquisition
+   Needs.
+
+3. **DEFINIÇÕES**
+
+Conceptual Model (CM): descrição do conteúdo e das representações
+internas de um modelo, que constituem o entendimento conjunto de
+patrocinadores, usuários e desenvolvedores, incluindo lógica e
+algoritmos, e reconhecendo explicitamente as suposições e limitações.
+
+Conceptual Model Space (CMS): domínio ao qual a representação do modelo
+conceitual se refere.
+
+Knowledge: As regras, o ambiente, etc., que formam a estrutura que os
+humanos usam para processar e se relacionar com as informações, ou as
+informações que um sistema de computador deve ter para se comportar de
+maneira aparentemente inteligente.
+
+Mission Space (MS): domínio relativo às ações, entidades e interações
+representadas pelos modelos dentro de um contexto operacional.
+
+Simulation Space (SS): domínio relativo à concepção e implementação da
+simulação em si.
+
+4. **CONTEÚDO**
+
++------+--------------------+-----------------------------------------+
+| *    | **Conceptual Model | **Conceptual Model Knowledge Needs**    |
+| *Spa | Requirements**     |                                         |
+| ce** |                    |                                         |
++======+====================+=========================================+
+| MS   | ASA-CMR-001        | - Conhecimento sobre Composite Air      |
+|      |                    | Operations (COMAO)                      |
+|      |                    |                                         |
+|      |                    | - Conhecimento sobre Ações de Força     |
+|      |                    | Aérea                                   |
++------+--------------------+-----------------------------------------+
+| MS + | ASA-CMR-002        | - Conhecimento das seguintes ações de   |
+| SS   |                    | Força Aérea: Ataque, Escolta,           |
+|      |                    | Varredura, Alerta de Defesa Aérea em    |
+|      |                    | Solo, Alerta de Defesa Aérea em Voo,    |
+|      |                    | Alarme Aéreo Antecipado, Defesa         |
+|      |                    | Antiaérea e Vigilância do Espaço Aéreo  |
+|      |                    |                                         |
+|      |                    | - Conhecimento sobre o conceito de      |
+|      |                    | simulações construtivas                 |
++------+--------------------+-----------------------------------------+
+| SS   | ASA-CMR-003        | - Conhecimento de ferramentas de apoio  |
+|      |                    | à decisão                               |
+|      |                    |                                         |
+|      |                    | - Conhecimento sobre o processo de      |
+|      |                    | Dimensionamento de Força                |
+|      |                    |                                         |
+|      |                    | - Conhecimento sobre o Planejamento     |
+|      |                    | Baseado em Capacidades (PBS)            |
++------+--------------------+-----------------------------------------+
+| CMS  | ASA-CMR-004        | - Conhecimento sobre os equipamentos    |
+|      |                    | utilizados em ações de Força Aérea      |
++------+--------------------+-----------------------------------------+
+| SS   | ASA-CMR-005        | - Conhecimento dos protocolos de        |
+|      |                    | interoperabilidade utilizados em        |
+|      |                    | simulações construtivas                 |
++------+--------------------+-----------------------------------------+
+| SS   | ASA-CMR-006        | - Conhecimento acerca de simulação      |
+|      |                    | baseada em entidades (entity-based      |
+|      |                    | simulation)                             |
++------+--------------------+-----------------------------------------+
+| MS   | ASA-CMR-007        | - Conhecimento sobre aspectos táticos e |
+|      |                    | doutrinários relativos às Ações de      |
+|      |                    | Força Aérea                             |
++------+--------------------+-----------------------------------------+
+| MS   | ASA-CMR-008        | - Conhecimentos de métricas             |
+|      |                    | operacionais para análises de           |
+|      |                    | Dimensionamento da Força/PBC            |
++------+--------------------+-----------------------------------------+
+| SS   | ASA-CMR-009        | - Conhecimentos em análises de dados de |
+|      |                    | simulações                              |
++------+--------------------+-----------------------------------------+
+| MS   | ASA-CMR-010        | - Conhecimento sobre o contexto do      |
+|      |                    | combate além do alcance visual:         |
+|      |                    | engajamento, lançamento de míssil       |
+|      |                    | ar-ar, manobras evasivas, etc           |
++------+--------------------+-----------------------------------------+
+| MS   | ASA-CMR-011        | - Conhecimento sobre lançamento de      |
+|      |                    | bombas: distância de lançamento, área   |
+|      |                    | média de eficácia, carga explosiva, etc |
++------+--------------------+-----------------------------------------+
+| MS   | ASA-CMR-012        | - Conhecimento sobre a missão de Combat |
+|      |                    | Air Patrol (CAP): coordenação entre     |
+|      |                    | aeronaves, distância do ponto de        |
+|      |                    | interesse, sentido do movimento, etc    |
++------+--------------------+-----------------------------------------+
+| MS   | ASA-CMR-013        | - Conhecimento sobre Flight Areas of    |
+|      |                    | Responsibility (FAOR): regras de        |
+|      |                    | engajamento, limites de atuação, etc    |
++------+--------------------+-----------------------------------------+
+| MS   | ASA-CMR-014        | - Conhecimento sobre missão de escolta: |
+|      |                    | voo em formação, manutenção de          |
+|      |                    | distância e altitude, curvas            |
+|      |                    | coordenadas, etc                        |
++------+--------------------+-----------------------------------------+
+| MS   | ASA-CMR-015        | - Conhecimento sobre missão de          |
+|      |                    | varredura: operação coordenada de       |
+|      |                    | radar, manobras de reconhecimento, etc  |
++------+--------------------+-----------------------------------------+
+| MS   | ASA-CMR-016        | - Conhecimento sobre formações de voo:  |
+|      |                    | box, vic, champagne, etc                |
+|      |                    |                                         |
+|      |                    | - Conhecimento sobre perfil de voo (ex: |
+|      |                    | high-low-high)                          |
+|      |                    |                                         |
+|      |                    | - Conhecimento sobre filosofia de tiro: |
+|      |                    | Weapon Engagement Zone (WEZ), suporte   |
+|      |                    | de míssil ar-ar                         |
+|      |                    |                                         |
+|      |                    | - Conhecimento sobre o processo de      |
+|      |                    | tomada de decisão do piloto             |
++------+--------------------+-----------------------------------------+
+| MS   | ASA-CMR-017        | - Conhecimento sobre mecânica de voo,   |
+|      |                    | aerodinâmica, propulsão, guerra         |
+|      |                    | eletrônica, entre outros relativos a    |
+|      |                    | aeronaves                               |
++------+--------------------+-----------------------------------------+
+| MS   | ASA-CMR-018        | - Conhecimento sobre guerra eletrônica: |
+|      |                    | radar, RWR                              |
+|      |                    |                                         |
+|      |                    | - Conhecimento sobre sistemas de        |
+|      |                    | comunicação: datalink, uplink           |
+|      |                    |                                         |
+|      |                    | - Conhecimento sobre sistemas de armas: |
+|      |                    | mísseis e bombas                        |
++------+--------------------+-----------------------------------------+
+| MS   | ASA-CMR-019        | - Conhecimento sobre mecânica de voo,   |
+|      |                    | aerodinâmica, propulsão, guerra         |
+|      |                    | eletrônica, entre outros relativos a    |
+|      |                    | mísseis                                 |
++------+--------------------+-----------------------------------------+
+| MS   | ASA-CMR-020        | - Conhecimento sobre mecânica de voo,   |
+|      |                    | aerodinâmica, entre outros relativos a  |
+|      |                    | bombas                                  |
++------+--------------------+-----------------------------------------+
+| MS   | ASA-CMR-021        | - Conhecimento sobre coordenação de     |
+|      |                    | aeronaves em formação                   |
++------+--------------------+-----------------------------------------+
+| MS   | ASA-CMR-022        | - Conhecimento sobre radares de defesa  |
+|      |                    | aérea: Air Surveillance Radars (ASR) e  |
+|      |                    | Air Defense Radars (ADR)                |
++------+--------------------+-----------------------------------------+
+| MS   | ASA-CMR-023        | - Conhecimento sobre Ground-Based Air   |
+|      |                    | Defenses (GBAD): fire unit, C2 unit,    |
+|      |                    | recarregamento, priorização de alvos,   |
+|      |                    | comunicação.                            |
+|      |                    |                                         |
+|      |                    | - Conhecimento sobre as características |
+|      |                    | dos sistemas S-400/Patriot              |
++------+--------------------+-----------------------------------------+
+| MS   | ASA-CMR-024        | - Conhecimento sobre acionamento de     |
+|      |                    | aeronaves em alerta em base (ALEBAS):   |
+|      |                    | identificação e classificação de alvos, |
+|      |                    | quantidade de aeronaves acionadas por   |
+|      |                    | missão, etc.                            |
+|      |                    |                                         |
+|      |                    | - Conhecimento sobre os intervalos de   |
+|      |                    | tempo esperados para; a classificação   |
+|      |                    | dos tracks, o acionamento do alerta e a |
+|      |                    | decolagem das aeronaves                 |
++------+--------------------+-----------------------------------------+
+| MS   | ASA-CMR-025        | - Conhecimento sobre coordenação de     |
+|      |                    | sistema de defesa aérea (Integrated Air |
+|      |                    | Defense System – IADS)                  |
++------+--------------------+-----------------------------------------+
+| MS   | ASA-CMR-026        | - Conhecimento sobre as aeronaves de    |
+|      |                    | alarme aéreo antecipado (AEW):          |
+|      |                    | vigilância do espaço aéreo,             |
+|      |                    | compartilhamento de tracks, etc         |
++------+--------------------+-----------------------------------------+
+| MS   | ASA-CMR-027        | - Conhecimento sobre especificações da  |
+|      |                    | aeronave EMB 145 AEW (E-99)             |
++------+--------------------+-----------------------------------------+
+| MS   | ASA-CMR-028        | - Conhecimento sobre os procedimentos   |
+|      |                    | de threat reaction de aeronave AEW:     |
+|      |                    | manobras evasivas                       |
++------+--------------------+-----------------------------------------+
+| MS   | ASA-CMR-029        | - Conhecimento sobre coordenação de     |
+|      |                    | aeronaves AEW                           |
++------+--------------------+-----------------------------------------+
+| MS   | ASA-CMR-030        | - Conhecimento da seguinte métrica para |
+|      |                    | avaliação de missões Denfesive Counter  |
+|      |                    | Air (DCA): nível de afastamento das     |
+|      |                    | aeronaves oponentes em relação à região |
+|      |                    | de interesse ao longo do tempo          |
++------+--------------------+-----------------------------------------+
+| MS   | ASA-CMR-031        | - Conhecimento sobre processo de        |
+|      |                    | detecção de aeronaves                   |
+|      |                    |                                         |
+|      |                    | - Conhecimento de métricas para         |
+|      |                    | avaliação de cenários COMAO: proporção  |
+|      |                    | de aeronaves oponentes que cruzaram a   |
+|      |                    | linha de contato sem ser detectadas     |
++------+--------------------+-----------------------------------------+
+| MS   | ASA-CMR-032        | - Conhecimento sobre processo de        |
+|      |                    | classificação de ameaças                |
+|      |                    |                                         |
+|      |                    | - Conhecimento da seguinte métrica para |
+|      |                    | avaliação de cenários COMAO: proporção  |
+|      |                    | de aeronaves oponentes que cruzaram a   |
+|      |                    | linha de contato sem ser classificadas  |
+|      |                    | como hostis.                            |
++------+--------------------+-----------------------------------------+
+| MS   | ASA-CMR-033        | - Conhecimento sobre missões de         |
+|      |                    | proteção de pontos sensíveis (defesa    |
+|      |                    | aérea)                                  |
+|      |                    |                                         |
+|      |                    | - Conhecimento da seguinte métrica para |
+|      |                    | avaliação de cenários COMAO: proporção  |
+|      |                    | de aeronaves oponentes que alcançaram   |
+|      |                    | as regiões sensíveis                    |
++------+--------------------+-----------------------------------------+
+| MS   | ASA-CMR-034        | - Conhecimento sobre engajamento de     |
+|      |                    | aeronaves hostis em território amigo    |
+|      |                    | (interceptação)                         |
+|      |                    |                                         |
+|      |                    | - Conhecimento da seguinte métrica para |
+|      |                    | avaliação de cenários COMAO: tempo      |
+|      |                    | decorrido até que todas as aeronaves    |
+|      |                    | oponentes no interior de seu território |
+|      |                    | tenham sido engajadas                   |
++------+--------------------+-----------------------------------------+
+| CMS  | ASA-CMR-035        | - Conhecimento de Unified Modeling      |
+|      |                    | Language (UML)                          |
+|      |                    |                                         |
+|      |                    | - Conhecimento sobre visualização e     |
+|      |                    | interpretação de dados em diagramas e   |
+|      |                    | gráficos                                |
++------+--------------------+-----------------------------------------+
+| SS   | ASA-CMR-036        | - Conhecimento sobre o framework MIXR:  |
+|      |                    | classes, métodos, atributos,            |
+|      |                    | estruturas, etc.                        |
+|      |                    |                                         |
+|      |                    | - Conhecimento da Linguagem C++         |
++------+--------------------+-----------------------------------------+
+| SS   | ASA-CMR-037        | - Conhecimento sobre a plataforma de    |
+|      |                    | visualização do ASA                     |
+|      |                    |                                         |
+|      |                    | - Conhecimento sobre documento de Visão |
+|      |                    | de Negócio do ASA                       |
++------+--------------------+-----------------------------------------+
+| SS   | ASA-CMR-038        | - Conhecimento de processamento         |
+|      |                    | computacional de simulações referente   |
+|      |                    | as taxas de atualização de cada frame   |
++------+--------------------+-----------------------------------------+
+| SS   | ASA-CMR-039        | - Conhecimento de processamento         |
+|      |                    | computacional de simulações referente a |
+|      |                    | diferentes velocidades de reprodução de |
+|      |                    | simulação (real-time e                  |
+|      |                    | faster-than-real-time)                  |
++------+--------------------+-----------------------------------------+
+| CMS  | ASA-CMR-040        | - Conhecimento sobre processo de        |
+|      |                    | Verificação e Validação (V&V)           |
+|      |                    |                                         |
+|      |                    | - Conhecimentos operacionais dos        |
+|      |                    | sistemas e subsistemas utilizados no    |
+|      |                    | ASA para V&V.                           |
+|      |                    |                                         |
+|      |                    | - Conhecimento sobre os cenários de     |
+|      |                    | interesse do EMAER                      |
+|      |                    |                                         |
+|      |                    | - Conhecimento sobre a construção de    |
+|      |                    | modelos que permitam a alteração de     |
+|      |                    | parâmetros táticos, doutrinários,       |
+|      |                    | mecânicos e aerodinâmicos, bem como a   |
+|      |                    | alteração dos sistemas componentes.     |
++------+--------------------+-----------------------------------------+

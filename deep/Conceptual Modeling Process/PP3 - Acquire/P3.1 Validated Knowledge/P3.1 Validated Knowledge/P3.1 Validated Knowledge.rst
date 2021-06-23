@@ -1,0 +1,373 @@
+1. **OBJETIVO**
+
+O objetivo do presente documento é dar cumprimento a todas as atividades
+do Process Phase 3 – Acquire Conceptual Model Knowledge, previsto no
+Conceptual Model Best-Practice Development Process emitido pela OTAN.
+
+Este documento, que representa o produto P3.1 - Validated Knowledge do
+referido processo, consolida o conhecimento obtido e/ou desenvolvido em
+resposta a uma necessidade e/ou requisito identificado. Tal conhecimento
+foi adquirido a partir de diversas fontes oficiais e, em seguida, foi
+estruturado, documentado e validado.
+
+2. **REFERÊNCIAS**
+
+RTO Technical Report MSG-058 – Conceptual Modeling for Military Modeling
+and Simulation:
+
+-  Process Phase 3 Guidance – Acquire Conceptual Model Knowledge
+
+-  6.2.7 Product 3.1 Guidance – Validated Knowledge
+
+3. **DEFINIÇÕES**
+
+Não se aplica.
+
+4. **CONTEÚDO**
+
+**4.1 CONHECIMENTO SOBRE SISTEMAS**
+
+**4.1.1 Multirole Combat Aircraft (MRCA)**
+
+-  Aircraft Control and Simulation: Dynamics, Controls Design, and
+   Autonomous Systems, 3rd Edition. Brian L. Stevens, Frank L. Lewis,
+   Eric N. Johnson
+
+-  Introduction to Radar Warning Receivers (Kim Cole)
+
+**4.1.2 Airborne Early Warning (AEW)**
+
+-  https://www.radartutorial.eu/
+
+**4.1.3 Air-to-Air Missile (AAM)**
+
+-  MIL-HDBK-1211: Military Handbook: Missile Flight Simulation (Part
+   One)
+
+**4.1.4 General-Purpose Bomb**
+
+-  MIL-HDBK-1211: Military Handbook: Missile Flight Simulation (Part
+   One)
+
+**4.1.5 Ground-Based Air Defense (GBAD)**
+
+-  http://www.ausairpower.net/APA-Rus-Low-Band-Radars.html#mozTocId555292/
+
+**4.1.6 Air Defense Radar (ADR)**
+
+-  https://www.radartutorial.eu/
+
+-  Material do Curso Doutrinário de Guerra Eletrônico (CDGE)
+
+**4.1.7 Air Surveillance Radar (ASR)**
+
+-  https://www.radartutorial.eu/
+
+-  Material do Curso Doutrinário de Guerra Eletrônico (CDGE)
+
+**4.2 CONHECIMENTO SOBRE CENÁRIO**
+
+-  DCA 1-1 – Doutrina Básica da FAB
+
+-  Joint Doctrine Publication 0-30: UK Air and Space Power
+
+**4.2.1 Caso 1**
+
++-------+----------------+---------------------------------------------+
+| Who   | Forças BLUE e  | 1 a 8 MRCA BLUE e                           |
+|       |                |                                             |
+|       | RED            | 1 a 8 MRCA RED                              |
++=======+================+=============================================+
+| What  | Estabelecer    | ALEVOO: é um tipo de missão de voo para     |
+|       | Combat Air     | aeronaves de combate. Uma patrulha aérea de |
+|       | Patrol (CAP) - | combate é uma patrulha de aeronave          |
+|       | Alerta em voo  | estabelecida sobre uma determinada área,    |
+|       | (ALEVOO)       | sobre uma força protegida, sobre uma área   |
+|       |                | crítica de uma zona de combate ou sobre uma |
+|       |                | área de defesa aérea, com a finalidade de   |
+|       |                | interceptar e destruir aeronaves hostis     |
+|       |                | antes que atinjam seu alvo.                 |
++-------+----------------+---------------------------------------------+
+| When  | A critério do  |                                             |
+|       | analista       |                                             |
++-------+----------------+---------------------------------------------+
+| Why   | Defender ponto |                                             |
+|       | sensível       |                                             |
++-------+----------------+---------------------------------------------+
+| Where | A critério do  |                                             |
+|       | analista       |                                             |
++-------+----------------+---------------------------------------------+
+
+**4.2.2 Caso 2**
+
++-------+---------------+---------------------------------------------+
+| Who   | Forças BLUE e | 4 a 16 Fighter BLUE;                        |
+|       |               |                                             |
+|       | RED           | 4 a 16 Fighter RED;                         |
+|       |               |                                             |
+|       |               | Até 2 ASR BLUE;                             |
+|       |               |                                             |
+|       |               | Até 2 ADR BLUE; e                           |
+|       |               |                                             |
+|       |               | Até 2 GBAD BLUE.                            |
++=======+===============+=============================================+
+| What  | Estabelecer   | ALEBAS: aeronaves prontas para acionamento  |
+|       | Combat Air    | a partir do solo (base)                     |
+|       | Patrol (CAP)  |                                             |
+|       | - Alerta em   |                                             |
+|       | base (ALEBAS) |                                             |
++-------+---------------+---------------------------------------------+
+| When  | A critério do |                                             |
+|       | analista      |                                             |
++-------+---------------+---------------------------------------------+
+| Why   | Defender      |                                             |
+|       | ponto         |                                             |
+|       | sensível      |                                             |
++-------+---------------+---------------------------------------------+
+| Where | A critério do |                                             |
+|       | analista      |                                             |
++-------+---------------+---------------------------------------------+
+
+**4.2.3 Caso 3**
+
++-------+-------------------+-----------------------------------------+
+| Who   | Forças BLUE e     | 8 a 14 Fighter BLUE (alerta em base);   |
+|       |                   |                                         |
+|       | RED               | 8 a 14 Fighter BLUE (alerta em voo),    |
+|       |                   | distribuídos em FAOR com capacidade     |
+|       |                   | para 2 ou 4 aeronaves;                  |
+|       |                   |                                         |
+|       |                   | 8 a 16 Fighter RED;                     |
+|       |                   |                                         |
+|       |                   | Até 2 ASR BLUE;                         |
+|       |                   |                                         |
+|       |                   | Até 2 ADR BLUE; e                       |
+|       |                   |                                         |
+|       |                   | Até 2 GBAD BLUE.                        |
++=======+===================+=========================================+
+| What  | Estabelecer       | Fighter Area of Responsibility (FAOR):  |
+|       | Combat Air Patrol | patrulha aérea de combate estabelecida  |
+|       | (CAP) - Alerta em | sobre uma determinada área, dentro da   |
+|       | voo (ALEVOO) e em | qual um grupo de caças possui autonomia |
+|       | base (ALEBAS)     | para engajar e destruir aeronaves       |
+|       |                   | hostis.                                 |
++-------+-------------------+-----------------------------------------+
+| When  | A critério do     |                                         |
+|       | analista          |                                         |
++-------+-------------------+-----------------------------------------+
+| Why   | Defender ponto    |                                         |
+|       | sensível          |                                         |
++-------+-------------------+-----------------------------------------+
+| Where | A critério do     |                                         |
+|       | analista          |                                         |
++-------+-------------------+-----------------------------------------+
+
+**4.2.4 Caso 4**
+
++-------+-----------------+-------------------------------------------+
+| Who   | Forças BLUE e   | 8 a 14 Fighter BLUE (alerta em base);     |
+|       |                 |                                           |
+|       | RED             | 8 a 14 Fighter BLUE (alerta em voo),      |
+|       |                 | distribuídos em FAOR com capacidade para  |
+|       |                 | 2 ou 4 aeronaves;                         |
+|       |                 |                                           |
+|       |                 | Até 8 Fighter RED;                        |
+|       |                 |                                           |
+|       |                 | 8 a 16 Striker RED;                       |
+|       |                 |                                           |
+|       |                 | Até 2 ASR BLUE;                           |
+|       |                 |                                           |
+|       |                 | Até 2 ADR BLUE; e                         |
+|       |                 |                                           |
+|       |                 | Até 2 GBAD BLUE.                          |
++=======+=================+===========================================+
+| What  | Estabelecer     | Striker: aeronave de caça cumprindo       |
+|       | Combat Air      | missão de ataque à superfície, i.e.,      |
+|       | Patrol (CAP) -  | lançamento de bombas e/ou mísseis ar-solo |
+|       | Alerta em voo e | contra alvos posicionados na superfície.  |
+|       | em base e       |                                           |
+|       |                 |                                           |
+|       | missões de      |                                           |
+|       | ataque ao solo  |                                           |
+|       | (Striker).      |                                           |
++-------+-----------------+-------------------------------------------+
+| When  | A critério do   |                                           |
+|       | analista        |                                           |
++-------+-----------------+-------------------------------------------+
+| Why   | Defender ponto  |                                           |
+|       | sensível        |                                           |
++-------+-----------------+-------------------------------------------+
+| Where | A critério do   |                                           |
+|       | analista        |                                           |
++-------+-----------------+-------------------------------------------+
+
+**4.2.5 Caso 5**
+
++--------+-------------------+----------------------------------------+
+| Who    | Forças BLUE e     | 8 a 14 Fighter BLUE (alerta em base);  |
+|        |                   |                                        |
+|        | RED               | 8 a 14 Fighter BLUE (alerta em voo),   |
+|        |                   | distribuídos em FAOR com capacidade    |
+|        |                   | para 2 ou 4 aeronaves;                 |
+|        |                   |                                        |
+|        |                   | Até 8 Fighter RED;                     |
+|        |                   |                                        |
+|        |                   | 8 a 16 Striker RED;                    |
+|        |                   |                                        |
+|        |                   | Até 2 ASR BLUE;                        |
+|        |                   |                                        |
+|        |                   | Até 2 ADR BLUE;                        |
+|        |                   |                                        |
+|        |                   | Até 2 GBAD BLUE; e                     |
+|        |                   |                                        |
+|        |                   | Até 2 AEW BLUE.                        |
++========+===================+========================================+
+| What   | Estabelecer       | AEW: A ideia da inclusão de aeronaves  |
+|        | Combat Air Patrol | desse tipo na simulação é avaliar o    |
+|        | (CAP) - Alerta em | aumento da cobertura radar e a         |
+|        | voo e em base,    | consequente melhora na detecção de     |
+|        | missões de ataque | alvos, em especial, aqueles voando a   |
+|        | ao solo e missões | baixa altura.                          |
+|        | de alerta aéreo   |                                        |
+|        | antecipado (AEW). |                                        |
++--------+-------------------+----------------------------------------+
+| When   | A critério do     |                                        |
+|        | analista          |                                        |
++--------+-------------------+----------------------------------------+
+| Why    | Defender ponto    |                                        |
+|        | sensível          |                                        |
++--------+-------------------+----------------------------------------+
+| Where  | A critério do     |                                        |
+|        | analista          |                                        |
++--------+-------------------+----------------------------------------+
+
+**4.3 CONHECIMENTO SOBRE SIMULAÇÃO**
+
+**4.3.1 MIXR**
+
+-  https://www.mixr.dev/
+
+**4.3.1.1 Classes básicas**
+
+-  https://www.mixr.dev/assets/pages/docs/basic-classes.pdf
+
+**4.3.1.2 Publicações**
+
+CSC’18: Douglas D. Hodson and David P. Gehl, “The Mixed Reality
+Simulation Platform (MIXR)”, The 16th International Conference on
+Scientific Computing (CSC’18), The 2018 World Congress in Computer
+Science, Computer Engineering & Applied Computing (CSCE’18), 2018.
+
+Winter Simulation 2017: Douglas D. Hodson, “Military Simulation: A
+Ubiquitous Future”, Winter Simulation Conference, 2017.
+
+I/ITSEC Tutorial: Douglas D. Hodson and David P. Gehl, “Design &
+Implementation of Virtual Simulations”, Interservice/Industry Training,
+Simulation, and Education Conference (I/ITSEC), Tutorial Session, 2008.
+
+I/ITSEC 2006 Paper: Douglas D. Hodson, David P. Gehl, and Rusty O.
+Baldwin, “Building Distributed Simulations Utilizing the EAAGLES
+Framework”, Interservice/Industry Training, Simulation, and Education
+Conference (I/ITSEC), 2006.
+
+I/ITSEC 2006 Presentation: Douglas D. Hodson, David P. Gehl, and Rusty
+O. Baldwin, “Building Distributed Simulations Utilizing the EAAGLES
+Framework”, Interservice/Industry Training, Simulation, and Education
+Conference (I/ITSEC), 2006.
+
+JSBSim Quarterly Newsletter Summer 2006: A two-page article on how
+JSBSim is interfaced and is used by OpenEaagles.
+
+AIAA Newsletter Jan 2008: The American Institute of Aeronautics and
+Astronautics (AIAA) Modeling and Simulation January 2008 Newsletter. A
+Publication of the AIAA Modeling and Simulation Technical Committee.
+“OpenEaagles, An Open-Source Simulation Framework”
+
+**4.3.2 AEROGRAF**
+
+-  Documentação da Plataforma AEROGRAF, de âmbito interno ao IEAv.
+
+**4.3.3 SIMULAÇÃO MILITAR**
+
+-  Office of the Under Secretary of Defense for Research and Engineering
+   Prototypes and Experiments, November 2019 (Version 2.0)
+
+-  Department of Defense Modeling and Simulation Body of Knowledge (BOK)
+
+**4.4. PUBLICAÇÕES INTERNAS**
+
+VÉRAS, L. G. D. O.; MEDEIROS, F. L. L.; GUIMARÃES, L. N. F. Systematic
+literature review of sampling process in rapidly-exploring random trees.
+IEEE Access, v. 7, p. 50933 – 50953, 2019.
+
+VÉRAS, LUIZ GDO; MEDEIROS, FELIPE LL; GUIMARÃES, LAMARTINE NF. Rapidly
+exploring Random Tree with a sampling method based on Sukharev grids and
+convex vertices of safety hullsof obstacles. International Journal of
+Advanced Robotic Systems, v. 16, 2019.
+
+COSTA, André Negrão. Sequential Optimization of Formation Flight Control
+Method Based on Artificial Potential Fields. 2019. 111f. Dissertation of
+Master of Science in Electronic Engineering and Computer Science –
+Instituto Tecnológico de Aeronáutica, São José dos Campos.
+
+DANTAS, J. Apoio à decisão para o combate aéreo além do alcance visual:
+uma abordagem por redes neurais artificiais. 2018. 144 f. Dissertação de
+Mestrado em Engenharia Eletrônica e Computação - Instituto Tecnológico
+de Aeronáutica. 2018.
+
+VÉRAS, L. G. D. O.; MEDEIROS, Felipe Leonardo Lôbo ; GUIMARÃES,
+Lamartine Nogueira Frutuoso. Application of Rapidly Exploring Random
+Tree Star-Smart and G2 Quintic Pythagorean Hodograph Curves to the UAV
+Path Planning Problem. International Journal of Mechanical and
+Mechatronics Engineering, v. 12, p. 497-505, 2018.
+
+MACEDO, Leonardo Honorio. Alocação Coordenada de Múltiplos Alvos Aéreos
+Utilizando Heurística Especializada. 2017. 94f. Dissertação de mestrado
+em Gestão Tecnológica - Instituto Tecnológico de Aeronáutica, São José
+dos Campos.
+
+MARQUES, Henrique Costa.; GERALDO, Diego.; MACEDO, Leonardo Honório.
+Arcabouço de combate BVR - Plataforma de apoio à decisão e ao
+treinamento de pilotos. SPECTRUM: Revistado Comando Geral de Operações
+Aéreas, Brasília, n.19, p.4-10, set. 2016.
+
+GERALDO, Diego.; PETERSEN, Flavio; AQUINO, Márcia Rodrigues Campos.
+AEROGRAF-PMA e combate BVR: o que há além? SPECTRUM: Revista do Comando
+Geral de Operações Aéreas, Brasília, n.19, p.4-10, set. 2015.
+
+MEDEIROS, Felipe Leonardo Lôbo; GOMES, V. C. F.; AQUINO, M. R. C.;
+GERALDO, D.; HONORATO, M. E. L.; DIAS, L. H. M. A Computer Vision System
+for Guidance of VTOL UAVs Autonomous Landing. In: 4th Brazilian
+Conference on Intelligent Systems (BRACIS), 2015, Natal. Proceedings of
+the 4th Brazilian Conference on Intelligent Systems (BRACIS), 2015.
+
+MEDEIROS, Felipe Leonardo Lôbo; Silva, José Demísio Simões da.
+Computational Modeling for Automatic Path Planning Based on Evaluations
+of the Effects of Impacts of UAVs on the Ground. Journal of Intelligent
+& Robotic Systems, v. 61, p. 181-202, 2011.
+
+MEDEIROS, Felipe Leonardo Lôbo; da Silva, José Demisio Simões. A
+Dijkstra Algorithm for Fixed-Wing UAV Motion Planning Based on Terrain
+Elevation. In: A. C. da Rocha Costa; R. M. Vicari; F.Tonidandel. (Org.).
+Lecture Notes in Computer Science. 1ed. Heidelberg: Springer Berlin
+Heidelberg, 2010, v. 6404, p. 213-222.
+
+PETERSEN, F. J.; AQUINO, M. R. C.; SALLES, R. N. Plataforma AEROGRAF: um
+SIG voltado para a força aérea. SPECTRUM: Revista do Comando Geral de
+Operações Aéreas, Brasília, n.11, p.26-28, set. 2008.
+
+**4.5 REGISTRO DE SOFTWARE**
+
+SANTOS, Davison Silva; LANGER, Diego Bonato; PETERSEN, Flavio Junior, DA
+SILVA, João Camilo, AQUINO, Márcia Rodrigues Campos de Aquino; SALLES,
+Roberto Neves. Ambiente de integração e visualização de ferramentas
+baseadas em informações Georreferenciadas - Plataforma AEROGRAF - Versão
+2012, Registro de Programa de Computador registrado sob o nº BR 51 2013
+001086-1 na Revista da Propriedade Industrial (RPI 2283), de 07OUT2014.
+
+PETERSEN, Flavio Junior, DA SILVA, João Camilo, AQUINO, Márcia Rodrigues
+Campos de Aquino; VEIGA, Ricardo Queiroz; SALLES, Roberto Neves.
+Ambiente de integração e visualização de ferramentas baseadas em
+informações Georreferenciadas - Plataforma AEROGRAF, Registro de
+Programa de Computador registrado sob o nº BR 51 2013 001087-0 na
+Revista da Propriedade Industrial (RPI 2283), de 07OUT2014.
